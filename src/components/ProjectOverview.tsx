@@ -1,199 +1,176 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { MapPin, Users, Euro, Wrench, Calendar, Droplets } from "lucide-react";
+import { MapPin, Clock, Users, Wrench, Droplets, Sparkles } from "lucide-react";
 
 const ProjectOverview = () => {
-  const equipments = [
-    { name: "2 Pistes Haute Pression", description: "Lavage manuel avec système HP" },
-    { name: "2 Portiques de Lavage", description: "Lavage automatique 5 programmes" },
-    { name: "Aire d'Aspiration", description: "Système d'aspiration et gonflage" },
-    { name: "Parfumeur Automatique", description: "Station de parfumage véhicules" },
-    { name: "Lave-Tapis Automatique", description: "Nettoyage automatisé des tapis" }
-  ];
-
-  const programs = [
-    { name: "Programme Basique", price: "8€", description: "Lavage standard" },
-    { name: "Programme Confort", price: "12€", description: "Lavage + séchage" },
-    { name: "Programme Premium", price: "16€", description: "Lavage complet + cire" },
-    { name: "Programme Luxe", price: "20€", description: "Lavage premium + protection" },
-    { name: "Programme Céramique", price: "24€", description: "Finition céramique haute qualité" }
-  ];
-
-  const maintenanceProducts = [
-    { name: "Shampooing Istobal", consumption: "1 bidon/mois/portique", price: "100-150€" },
-    { name: "Cire Istobal", consumption: "1 bidon/mois/portique", price: "100-150€" }
-  ];
-
   return (
     <div className="grid gap-6">
-      {/* Localisation */}
-      <Card className="border-l-4 border-l-fuchsia-500 shadow-lg">
-        <CardHeader className="bg-gradient-to-r from-fuchsia-50 to-pink-50">
+      {/* Hero Section avec image */}
+      <Card className="overflow-hidden">
+        <div className="relative h-64 bg-gradient-to-r from-fuchsia-600 to-pink-600">
+          <img 
+            src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1200&h=400&fit=crop" 
+            alt="Station de lavage moderne"
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center text-white">
+              <h2 className="text-3xl font-bold mb-2">LEUCWASH</h2>
+              <p className="text-xl">Station de Lavage Automobile Écoresponsable</p>
+            </div>
+          </div>
+        </div>
+        <CardContent className="p-6">
+          <p className="text-gray-600 mb-4">
+            Projet d'implantation d'une station de lavage automobile moderne et écoresponsable à Leucate, 
+            équipée des dernières technologies Istobal pour offrir un service de qualité premium.
+          </p>
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="text-center p-4 bg-fuchsia-50 rounded-lg">
+              <MapPin className="h-8 w-8 text-fuchsia-600 mx-auto mb-2" />
+              <p className="font-semibold">Localisation</p>
+              <p className="text-sm text-gray-600">Zone artisanale, Leucate</p>
+            </div>
+            <div className="text-center p-4 bg-pink-50 rounded-lg">
+              <Users className="h-8 w-8 text-pink-600 mx-auto mb-2" />
+              <p className="font-semibold">Marché cible</p>
+              <p className="text-sm text-gray-600">80 000 personnes en été</p>
+            </div>
+            <div className="text-center p-4 bg-purple-50 rounded-lg">
+              <Sparkles className="h-8 w-8 text-purple-600 mx-auto mb-2" />
+              <p className="font-semibold">Technologie</p>
+              <p className="text-sm text-gray-600">Équipements Istobal</p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Services avec images */}
+      <Card>
+        <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <MapPin className="h-5 w-5 text-fuchsia-500" />
+            <Droplets className="h-5 w-5 text-blue-500" />
+            Gamme de Services
+          </CardTitle>
+          <CardDescription>Solutions complètes de lavage automobile</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="text-center">
+              <img 
+                src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=300&h=200&fit=crop" 
+                alt="Portiques de lavage"
+                className="w-full h-32 object-cover rounded-lg mb-3"
+              />
+              <h4 className="font-semibold text-fuchsia-800 mb-2">Portiques Automatiques</h4>
+              <p className="text-sm text-gray-600">2 portiques Istobal dernière génération</p>
+            </div>
+            <div className="text-center">
+              <img 
+                src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=300&h=200&fit=crop" 
+                alt="Pistes haute pression"
+                className="w-full h-32 object-cover rounded-lg mb-3"
+              />
+              <h4 className="font-semibold text-fuchsia-800 mb-2">Pistes Haute Pression</h4>
+              <p className="text-sm text-gray-600">4 pistes de lavage self-service</p>
+            </div>
+            <div className="text-center">
+              <img 
+                src="https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=300&h=200&fit=crop" 
+                alt="Aspiration"
+                className="w-full h-32 object-cover rounded-lg mb-3"
+              />
+              <h4 className="font-semibold text-fuchsia-800 mb-2">Aspiration</h4>
+              <p className="text-sm text-gray-600">8 pistes d'aspiration haute performance</p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Localisation avec image */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <MapPin className="h-5 w-5 text-green-500" />
             Localisation Stratégique
           </CardTitle>
         </CardHeader>
-        <CardContent className="grid md:grid-cols-2 gap-4">
-          <div>
-            <h4 className="font-semibold mb-2 text-fuchsia-800">Adresse du Projet</h4>
-            <p className="text-gray-600">Parcelles 0600 et 0596</p>
-            <p className="text-gray-600">Zone artisanale de Leucate</p>
-            <p className="text-gray-600">Route D627 - Accès rond-point direct</p>
-          </div>
-          <div>
-            <h4 className="font-semibold mb-2 text-fuchsia-800">Données Démographiques</h4>
-            <div className="flex items-center gap-2 mb-1">
-              <Users className="h-4 w-4 text-fuchsia-500" />
-              <span>5 300 habitants permanents</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Users className="h-4 w-4 text-pink-500" />
-              <span>80 000 habitants en saison estivale</span>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Équipements */}
-      <Card className="border-l-4 border-l-green-500 shadow-lg">
-        <CardHeader className="bg-gradient-to-r from-green-50 to-fuchsia-50">
-          <CardTitle className="flex items-center gap-2">
-            <Wrench className="h-5 w-5 text-green-500" />
-            Équipements Istobal France
-          </CardTitle>
-          <CardDescription>Technologies avancées et écoresponsables</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {equipments.map((equipment, index) => (
-              <div key={index} className="p-4 bg-gradient-to-br from-fuchsia-50 to-pink-50 rounded-lg border border-fuchsia-100">
-                <h4 className="font-semibold text-fuchsia-800 mb-1">{equipment.name}</h4>
-                <p className="text-sm text-gray-600">{equipment.description}</p>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Installation et Maintenance */}
-      <Card className="border-l-4 border-l-purple-500 shadow-lg">
-        <CardHeader className="bg-gradient-to-r from-purple-50 to-fuchsia-50">
-          <CardTitle className="flex items-center gap-2">
-            <Calendar className="h-5 w-5 text-purple-500" />
-            Installation et Maintenance
-          </CardTitle>
-          <CardDescription>Planning et coûts d'exploitation</CardDescription>
-        </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-semibold mb-3 text-fuchsia-800">Montage des Équipements</h4>
-              <div className="p-4 bg-gradient-to-r from-fuchsia-100 to-pink-100 rounded-lg">
-                <div className="flex items-center gap-2">
-                  <Calendar className="h-4 w-4 text-fuchsia-600" />
-                  <span className="font-semibold text-fuchsia-800">Durée: 1 mois et demi</span>
-                </div>
-                <p className="text-sm text-gray-600 mt-2">Installation complète par les équipes Istobal</p>
-              </div>
+              <img 
+                src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=500&h=300&fit=crop" 
+                alt="Vue aérienne de Leucate"
+                className="w-full h-48 object-cover rounded-lg mb-4"
+              />
             </div>
-            <div>
-              <h4 className="font-semibold mb-3 text-fuchsia-800">Produits d'Entretien</h4>
-              <div className="space-y-2">
-                {maintenanceProducts.map((product, index) => (
-                  <div key={index} className="p-3 bg-gradient-to-r from-pink-50 to-fuchsia-50 rounded-lg border border-fuchsia-100">
-                    <div className="flex justify-between items-start">
-                      <span className="font-medium text-fuchsia-800">{product.name}</span>
-                      <Badge className="bg-fuchsia-500 text-white">{product.price}</Badge>
-                    </div>
-                    <p className="text-xs text-gray-600">{product.consumption}</p>
-                  </div>
-                ))}
+            <div className="space-y-4">
+              <div className="p-4 bg-green-50 rounded-lg">
+                <h4 className="font-semibold text-green-800 mb-2">Zone Artisanale</h4>
+                <p className="text-sm text-green-700">Emplacement stratégique au rond-point central avec accès direct depuis la D627</p>
+              </div>
+              <div className="p-4 bg-blue-50 rounded-lg">
+                <h4 className="font-semibold text-blue-800 mb-2">Accessibilité</h4>
+                <p className="text-sm text-blue-700">Visibilité maximale et facilité d'accès pour la clientèle locale et touristique</p>
+              </div>
+              <div className="p-4 bg-purple-50 rounded-lg">
+                <h4 className="font-semibold text-purple-800 mb-2">Environnement</h4>
+                <p className="text-sm text-purple-700">Proximité immédiate des services : garage, fitness, restauration</p>
               </div>
             </div>
           </div>
         </CardContent>
       </Card>
 
-      {/* Programmes de Lavage */}
-      <Card className="border-l-4 border-l-fuchsia-600 shadow-lg">
-        <CardHeader className="bg-gradient-to-r from-fuchsia-50 to-purple-50">
+      {/* Équipements Istobal avec images */}
+      <Card>
+        <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Euro className="h-5 w-5 text-fuchsia-600" />
-            Programmes de Lavage
-          </CardTitle>
-          <CardDescription>5 formules adaptées à tous les besoins</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {programs.map((program, index) => (
-              <div key={index} className="p-4 border-2 border-fuchsia-200 rounded-lg hover:shadow-lg hover:border-fuchsia-400 transition-all bg-gradient-to-br from-white to-fuchsia-50">
-                <div className="flex justify-between items-start mb-2">
-                  <h4 className="font-semibold text-fuchsia-800">{program.name}</h4>
-                  <Badge variant="secondary" className="bg-fuchsia-500 text-white">
-                    {program.price}
-                  </Badge>
-                </div>
-                <p className="text-sm text-gray-600">{program.description}</p>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Investissement Initial */}
-      <Card className="border-l-4 border-l-orange-500 shadow-lg">
-        <CardHeader className="bg-gradient-to-r from-orange-50 to-fuchsia-50">
-          <CardTitle className="flex items-center gap-2">
-            <Euro className="h-5 w-5 text-orange-500" />
-            Investissement Initial
+            <Wrench className="h-5 w-5 text-orange-500" />
+            Équipements Istobal Premium
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-semibold mb-3 text-fuchsia-800">Coûts des Équipements</h4>
-              <div className="space-y-2">
-                <div className="flex justify-between p-2 bg-gradient-to-r from-fuchsia-50 to-pink-50 rounded">
-                  <span>Équipements (pistes HP, portiques, aspiration)</span>
-                  <span className="font-semibold text-fuchsia-700">425 236,80 €</span>
-                </div>
-                <div className="flex justify-between p-2 bg-gradient-to-r from-pink-50 to-fuchsia-50 rounded">
-                  <span>Couverture GS Industrie</span>
-                  <span className="font-semibold text-fuchsia-700">82 198,80 €</span>
-                </div>
-                <div className="flex justify-between p-2 bg-gradient-to-r from-fuchsia-50 to-pink-50 rounded">
-                  <span>VRD et Génie Civil</span>
-                  <span className="font-semibold text-fuchsia-700">150 000 €</span>
-                </div>
-                <div className="flex justify-between p-2 bg-gradient-to-r from-pink-50 to-fuchsia-50 rounded">
-                  <span>Local technique (11x3m)</span>
-                  <span className="font-semibold text-fuchsia-700">30 000 €</span>
-                </div>
-                <hr className="my-2 border-fuchsia-200" />
-                <div className="flex justify-between text-lg font-bold p-3 bg-gradient-to-r from-fuchsia-100 to-pink-100 rounded-lg">
-                  <span className="text-fuchsia-800">Total Équipements</span>
-                  <span className="text-fuchsia-700">687 435,60 €</span>
-                </div>
-              </div>
+              <h4 className="font-semibold mb-3 text-orange-800">Technologies Avancées</h4>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-start gap-2">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
+                  <span>Système de lavage écoresponsable avec recyclage d'eau</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
+                  <span>Portiques automatiques avec détection véhicule</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
+                  <span>Système de paiement sans contact intégré</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
+                  <span>Produits Istobal : shampoings et cires premium (100-150€/bidon)</span>
+                </li>
+              </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-3 text-fuchsia-800">Financement</h4>
-              <div className="space-y-2">
-                <div className="flex justify-between p-2 bg-gradient-to-r from-green-50 to-fuchsia-50 rounded">
-                  <span>Apport personnel</span>
-                  <span className="font-semibold text-green-600">50 000 €</span>
-                </div>
-                <div className="flex justify-between p-2 bg-gradient-to-r from-fuchsia-50 to-green-50 rounded">
-                  <span>Bien immobilier (garantie)</span>
-                  <span className="font-semibold text-green-600">280 000 €</span>
-                </div>
-                <hr className="my-2 border-fuchsia-200" />
-                <div className="flex justify-between text-lg font-bold p-3 bg-gradient-to-r from-green-100 to-fuchsia-100 rounded-lg">
-                  <span className="text-fuchsia-800">Total Garanties</span>
-                  <span className="text-green-600">330 000 €</span>
-                </div>
+              <img 
+                src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=500&h=300&fit=crop" 
+                alt="Équipements de lavage modernes"
+                className="w-full h-48 object-cover rounded-lg"
+              />
+            </div>
+          </div>
+          <div className="mt-6 p-4 bg-gradient-to-r from-orange-50 to-red-50 rounded-lg border border-orange-200">
+            <h4 className="font-semibold text-orange-800 mb-2">Planning d'Installation</h4>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div>
+                <p className="text-sm text-orange-700 mb-1"><strong>Durée de montage :</strong> 1 mois et demi</p>
+                <p className="text-sm text-orange-700"><strong>Maintenance :</strong> 1 bidon shampoing + 1 bidon cire/mois (fonctionnement optimal)</p>
+              </div>
+              <div>
+                <p className="text-sm text-orange-700 mb-1"><strong>Support technique :</strong> Formation incluse</p>
+                <p className="text-sm text-orange-700"><strong>Garantie :</strong> Équipements dernière génération</p>
               </div>
             </div>
           </div>

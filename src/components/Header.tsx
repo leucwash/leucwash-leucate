@@ -1,33 +1,39 @@
 
-import { Car, Droplets, Sun } from "lucide-react";
+import { Car, Droplets } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className="bg-gradient-to-r from-white via-fuchsia-50 to-pink-50 shadow-lg border-b-4 border-gradient-to-r from-fuchsia-500 to-pink-500">
-      <div className="container mx-auto px-4 py-6">
+    <header className="bg-gradient-to-r from-fuchsia-600 via-pink-600 to-purple-600 text-white shadow-lg">
+      <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <div className="relative">
-              <Car className="h-12 w-12 text-fuchsia-600" />
-              <Droplets className="h-6 w-6 text-fuchsia-400 absolute -top-1 -right-1" />
+          <div className="flex items-center gap-3">
+            <div className="p-2 bg-white/20 rounded-full">
+              <Car className="h-6 w-6" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text text-transparent">LEUCWASH</h2>
-              <p className="text-sm text-gray-600">Station Écoresponsable</p>
+              <h1 className="text-2xl font-bold">LEUCWASH</h1>
+              <p className="text-sm opacity-90">Station Écoresponsable</p>
             </div>
           </div>
-          
-          <div className="flex items-center space-x-6 text-sm text-gray-600">
-            <div className="flex items-center space-x-2 bg-gradient-to-r from-yellow-50 to-fuchsia-50 px-3 py-2 rounded-lg border border-fuchsia-200">
-              <Sun className="h-5 w-5 text-yellow-500" />
-              <span>Énergie Solaire</span>
+          <div className="hidden md:flex items-center gap-6">
+            <div className="flex items-center gap-2">
+              <Droplets className="h-4 w-4" />
+              <span className="text-sm">Technologies Istobal</span>
             </div>
-            <div className="flex items-center space-x-2 bg-gradient-to-r from-blue-50 to-fuchsia-50 px-3 py-2 rounded-lg border border-fuchsia-200">
-              <Droplets className="h-5 w-5 text-blue-500" />
-              <span>Recyclage d'Eau</span>
+            <div className="text-right">
+              <p className="text-sm font-medium">Leucate, Aude</p>
+              <p className="text-xs opacity-90">Zone Artisanale D627</p>
             </div>
           </div>
         </div>
+      </div>
+      <div className="relative h-32 overflow-hidden">
+        <img 
+          src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=1200&h=200&fit=crop" 
+          alt="Paysage de Leucate"
+          className="w-full h-full object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-fuchsia-600/30 to-transparent"></div>
       </div>
     </header>
   );
