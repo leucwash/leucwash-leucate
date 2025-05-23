@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
-import { TrendingUp, Target, MapPin, Calendar } from "lucide-react";
+import { TrendingUp, Target, MapPin, Calendar, Building2, ShoppingCart } from "lucide-react";
 
 const MarketStudy = () => {
   const demographicData = [
@@ -22,6 +22,21 @@ const MarketStudy = () => {
     { segment: "Touristes été", value: 45, color: "#10B981" },
     { segment: "Professionnels", value: 15, color: "#F59E0B" },
     { segment: "Passage D627", value: 5, color: "#EF4444" }
+  ];
+
+  const nearbyBusinesses = [
+    { category: "Services d'urgence", business: "Pompiers", icon: "🚒" },
+    { category: "Automobile", business: "Garage auto dépannage Leucice Glaçon", icon: "🔧" },
+    { category: "Sport & Loisirs", business: "Club Fitness", icon: "💪" },
+    { category: "Nautisme", business: "Entreprise de voilerie", icon: "⛵" },
+    { category: "Restauration", business: "Cave à bières", icon: "🍺" },
+    { category: "Restauration", business: "Plats à emporter asiatique", icon: "🥡" }
+  ];
+
+  const locationAdvantages = [
+    { zone: "Zone artisanale", description: "Concentration d'entreprises et de services", color: "fuchsia" },
+    { zone: "Côté village", description: "Station-service et Carrefour City", color: "pink" },
+    { zone: "Rond-point central", description: "Accès direct depuis la D627", color: "purple" }
   ];
 
   return (
@@ -56,6 +71,71 @@ const MarketStudy = () => {
             <div className="p-4 bg-green-50 rounded-lg">
               <h4 className="font-semibold text-green-800 mb-2">Pic Estival</h4>
               <p className="text-sm text-green-700">Multiplication par 15 de la population en été (80 000 personnes), créant un potentiel de revenus exceptionnel.</p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Environnement Commercial */}
+      <Card className="border-l-4 border-l-fuchsia-500">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Building2 className="h-5 w-5 text-fuchsia-500" />
+            Environnement Commercial
+          </CardTitle>
+          <CardDescription>Analyse de l'écosystème économique local</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="grid gap-6">
+            <div>
+              <h4 className="font-semibold mb-3 text-fuchsia-800">Zone Artisanale - Services de Proximité</h4>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+                {nearbyBusinesses.map((business, index) => (
+                  <div key={index} className="p-3 bg-gradient-to-r from-fuchsia-50 to-pink-50 rounded-lg border border-fuchsia-200">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-lg">{business.icon}</span>
+                      <span className="text-xs font-medium text-fuchsia-700">{business.category}</span>
+                    </div>
+                    <p className="text-sm font-medium text-gray-800">{business.business}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold mb-3 text-fuchsia-800">Répartition Géographique</h4>
+              <div className="grid md:grid-cols-3 gap-4">
+                {locationAdvantages.map((location, index) => (
+                  <div key={index} className={`p-4 bg-gradient-to-br from-${location.color}-50 to-${location.color}-100 rounded-lg border border-${location.color}-200`}>
+                    <h5 className={`font-semibold text-${location.color}-800 mb-2`}>{location.zone}</h5>
+                    <p className={`text-sm text-${location.color}-700`}>{location.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="p-4 bg-gradient-to-r from-fuchsia-100 to-pink-100 rounded-lg border border-fuchsia-300">
+              <h4 className="font-semibold text-fuchsia-800 mb-2">Avantage Concurrentiel de Localisation</h4>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <h5 className="font-medium text-fuchsia-700 mb-1">Synergies Commerciales</h5>
+                  <ul className="text-sm text-fuchsia-600 space-y-1">
+                    <li>• Clientèle du garage auto (entretien véhicules)</li>
+                    <li>• Employés des entreprises locales</li>
+                    <li>• Membres du club fitness</li>
+                    <li>• Flux de la zone de restauration</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 className="font-medium text-fuchsia-700 mb-1">Accessibilité Optimale</h5>
+                  <ul className="text-sm text-fuchsia-600 space-y-1">
+                    <li>• Rond-point central stratégique</li>
+                    <li>• Proximité Carrefour City (côté village)</li>
+                    <li>• Accès direct D627 très fréquentée</li>
+                    <li>• Visibilité depuis les deux axes</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </CardContent>
@@ -143,6 +223,7 @@ const MarketStudy = () => {
               <li>• Approche écoresponsable unique dans la région</li>
               <li>• Gamme complète de services (5 programmes de lavage)</li>
               <li>• Absence de concurrence directe sur Leucate</li>
+              <li>• Synergies avec l'écosystème commercial local</li>
             </ul>
           </div>
         </CardContent>
