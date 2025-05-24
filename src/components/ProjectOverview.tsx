@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { MapPin, Clock, Users, Wrench, Droplets, Sparkles } from "lucide-react";
+import { MapPin, Clock, Users, Wrench, Droplets, Sparkles, Wind, Car } from "lucide-react";
 
 const ProjectOverview = () => {
   return (
@@ -9,9 +9,9 @@ const ProjectOverview = () => {
       <Card className="overflow-hidden">
         <div className="relative h-64 bg-gradient-to-r from-fuchsia-600 to-pink-600">
           <img 
-            src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1200&h=400&fit=crop" 
-            alt="Station de lavage moderne"
-            className="w-full h-full object-cover opacity-20"
+            src="/lovable-uploads/c39bfbcf-ee5d-4012-9572-585f1c5f01d0.png" 
+            alt="Portique Istobal en action"
+            className="w-full h-full object-cover opacity-30"
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center text-white">
@@ -45,7 +45,7 @@ const ProjectOverview = () => {
         </CardContent>
       </Card>
 
-      {/* Services avec images */}
+      {/* Services avec images réelles */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -55,19 +55,25 @@ const ProjectOverview = () => {
           <CardDescription>Solutions complètes de lavage automobile</CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <img 
-                src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=300&h=200&fit=crop" 
-                alt="Portiques de lavage"
+                src="/lovable-uploads/136b8ef4-ce47-4957-b4e4-09238d691006.png" 
+                alt="Portiques Istobal automatiques"
                 className="w-full h-32 object-cover rounded-lg mb-3"
               />
               <h4 className="font-semibold text-fuchsia-800 mb-2">Portiques Automatiques</h4>
-              <p className="text-sm text-gray-600">2 portiques Istobal dernière génération</p>
+              <div className="text-xs text-gray-600 space-y-1">
+                <p>• Programme Express (5€)</p>
+                <p>• Programme Confort (8€)</p>
+                <p>• Programme Premium (12€)</p>
+                <p>• Programme Luxe (15€)</p>
+                <p>• Programme VIP (20€)</p>
+              </div>
             </div>
             <div className="text-center">
               <img 
-                src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=300&h=200&fit=crop" 
+                src="/lovable-uploads/3f284cd4-a120-4372-8563-6dac6b1f81d3.png" 
                 alt="Pistes haute pression"
                 className="w-full h-32 object-cover rounded-lg mb-3"
               />
@@ -75,19 +81,28 @@ const ProjectOverview = () => {
               <p className="text-sm text-gray-600">4 pistes de lavage self-service</p>
             </div>
             <div className="text-center">
-              <img 
-                src="https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=300&h=200&fit=crop" 
-                alt="Aspiration"
-                className="w-full h-32 object-cover rounded-lg mb-3"
-              />
+              <div className="w-full h-32 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg mb-3 flex items-center justify-center">
+                <Wind className="h-12 w-12 text-blue-600" />
+              </div>
               <h4 className="font-semibold text-fuchsia-800 mb-2">Aspiration</h4>
-              <p className="text-sm text-gray-600">8 pistes d'aspiration haute performance</p>
+              <p className="text-sm text-gray-600">2 pistes d'aspiration haute performance</p>
+            </div>
+            <div className="text-center">
+              <div className="w-full h-32 bg-gradient-to-br from-green-100 to-green-200 rounded-lg mb-3 flex items-center justify-center">
+                <Car className="h-12 w-12 text-green-600" />
+              </div>
+              <h4 className="font-semibold text-fuchsia-800 mb-2">Services Complémentaires</h4>
+              <div className="text-xs text-gray-600 space-y-1">
+                <p>• Gonflage des pneus</p>
+                <p>• Souffleur</p>
+                <p>• Parfumeur d'habitacle</p>
+              </div>
             </div>
           </div>
         </CardContent>
       </Card>
 
-      {/* Localisation avec image */}
+      {/* Localisation stratégique */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -111,7 +126,7 @@ const ProjectOverview = () => {
               </div>
               <div className="p-4 bg-blue-50 rounded-lg">
                 <h4 className="font-semibold text-blue-800 mb-2">Accessibilité</h4>
-                <p className="text-sm text-blue-700">Visibilité maximale et facilité d'accès pour la clientèle locale et touristique</p>
+                <p className="text-sm text-blue-700">Accès très facile pour la clientèle locale et touristique depuis la D627</p>
               </div>
               <div className="p-4 bg-purple-50 rounded-lg">
                 <h4 className="font-semibold text-purple-800 mb-2">Environnement</h4>
@@ -122,7 +137,7 @@ const ProjectOverview = () => {
         </CardContent>
       </Card>
 
-      {/* Équipements Istobal avec images */}
+      {/* Équipements Istobal avec images réelles */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -141,7 +156,7 @@ const ProjectOverview = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
-                  <span>Portiques automatiques avec détection véhicule</span>
+                  <span>Portiques automatiques avec détection véhicule intelligente</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
@@ -149,14 +164,14 @@ const ProjectOverview = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
-                  <span>Produits Istobal : shampoings et cires premium (100-150€/bidon)</span>
+                  <span>Éclairage LED spectaculaire pour une expérience premium</span>
                 </li>
               </ul>
             </div>
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=500&h=300&fit=crop" 
-                alt="Équipements de lavage modernes"
+                src="/lovable-uploads/7d11ad53-bd61-467a-8045-e276b622ab80.png" 
+                alt="Équipements Istobal en action"
                 className="w-full h-48 object-cover rounded-lg"
               />
             </div>
@@ -165,12 +180,14 @@ const ProjectOverview = () => {
             <h4 className="font-semibold text-orange-800 mb-2">Planning d'Installation</h4>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <p className="text-sm text-orange-700 mb-1"><strong>Durée de montage :</strong> 1 mois et demi</p>
-                <p className="text-sm text-orange-700"><strong>Maintenance :</strong> 1 bidon shampoing + 1 bidon cire/mois (fonctionnement optimal)</p>
+                <p className="text-sm text-orange-700 mb-1"><strong>Génie civil :</strong> 3 mois</p>
+                <p className="text-sm text-orange-700 mb-1"><strong>Installation équipements :</strong> 1 mois et demi</p>
+                <p className="text-sm text-orange-700"><strong>Maintenance :</strong> Coûts réduits grâce à la technologie Istobal</p>
               </div>
               <div>
                 <p className="text-sm text-orange-700 mb-1"><strong>Support technique :</strong> Formation incluse</p>
-                <p className="text-sm text-orange-700"><strong>Garantie :</strong> Équipements dernière génération</p>
+                <p className="text-sm text-orange-700 mb-1"><strong>Garantie :</strong> Équipements dernière génération</p>
+                <p className="text-sm text-orange-700"><strong>Validation :</strong> Projet à l'ordre du jour de la mairie de Leucate</p>
               </div>
             </div>
           </div>

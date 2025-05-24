@@ -24,13 +24,24 @@ const MarketStudy = () => {
     { segment: "Passage D627", value: 5, color: "#EF4444" }
   ];
 
-  const nearbyBusinesses = [
+  // Zone artisanale businesses
+  const zoneArtisanaleBusinesses = [
     { category: "Services d'urgence", business: "Pompiers", icon: "🚒" },
     { category: "Automobile", business: "Garage auto dépannage Leucice Glaçon", icon: "🔧" },
     { category: "Sport & Loisirs", business: "Club Fitness", icon: "💪" },
     { category: "Nautisme", business: "Entreprise de voilerie", icon: "⛵" },
     { category: "Restauration", business: "Cave à bières", icon: "🍺" },
     { category: "Restauration", business: "Plats à emporter asiatique", icon: "🥡" }
+  ];
+
+  // Leucate village businesses
+  const leucateVillageBusinesses = [
+    { category: "Grande surface", business: "Carrefour City", icon: "🛒" },
+    { category: "Carburant", business: "Station-service", icon: "⛽" },
+    { category: "Commerces", business: "Commerces de proximité", icon: "🏪" },
+    { category: "Services", business: "Mairie de Leucate", icon: "🏛️" },
+    { category: "Tourisme", business: "Office de tourisme", icon: "ℹ️" },
+    { category: "Restauration", business: "Restaurants locaux", icon: "🍽️" }
   ];
 
   const locationAdvantages = [
@@ -88,9 +99,9 @@ const MarketStudy = () => {
         <CardContent>
           <div className="grid gap-6">
             <div>
-              <h4 className="font-semibold mb-3 text-fuchsia-800">Zone Artisanale - Services de Proximité</h4>
+              <h4 className="font-semibold mb-3 text-fuchsia-800">Zone Artisanale de Leucate</h4>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
-                {nearbyBusinesses.map((business, index) => (
+                {zoneArtisanaleBusinesses.map((business, index) => (
                   <div key={index} className="p-3 bg-gradient-to-r from-fuchsia-50 to-pink-50 rounded-lg border border-fuchsia-200">
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-lg">{business.icon}</span>
@@ -103,12 +114,15 @@ const MarketStudy = () => {
             </div>
             
             <div>
-              <h4 className="font-semibold mb-3 text-fuchsia-800">Répartition Géographique</h4>
-              <div className="grid md:grid-cols-3 gap-4">
-                {locationAdvantages.map((location, index) => (
-                  <div key={index} className={`p-4 bg-gradient-to-br from-${location.color}-50 to-${location.color}-100 rounded-lg border border-${location.color}-200`}>
-                    <h5 className={`font-semibold text-${location.color}-800 mb-2`}>{location.zone}</h5>
-                    <p className={`text-sm text-${location.color}-700`}>{location.description}</p>
+              <h4 className="font-semibold mb-3 text-pink-800">Leucate Village</h4>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+                {leucateVillageBusinesses.map((business, index) => (
+                  <div key={index} className="p-3 bg-gradient-to-r from-pink-50 to-purple-50 rounded-lg border border-pink-200">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-lg">{business.icon}</span>
+                      <span className="text-xs font-medium text-pink-700">{business.category}</span>
+                    </div>
+                    <p className="text-sm font-medium text-gray-800">{business.business}</p>
                   </div>
                 ))}
               </div>
@@ -127,12 +141,12 @@ const MarketStudy = () => {
                   </ul>
                 </div>
                 <div>
-                  <h5 className="font-medium text-fuchsia-700 mb-1">Accessibilité Optimale</h5>
+                  <h5 className="font-medium text-fuchsia-700 mb-1">Position Stratégique</h5>
                   <ul className="text-sm text-fuchsia-600 space-y-1">
-                    <li>• Rond-point central stratégique</li>
+                    <li>• Rond-point central entre zone artisanale et village</li>
                     <li>• Proximité Carrefour City (côté village)</li>
                     <li>• Accès direct D627 très fréquentée</li>
-                    <li>• Visibilité depuis les deux axes</li>
+                    <li>• Facilité d'accès depuis les deux zones</li>
                   </ul>
                 </div>
               </div>
@@ -216,14 +230,15 @@ const MarketStudy = () => {
             ))}
           </div>
           <div className="mt-6 p-4 bg-green-50 rounded-lg">
-            <h4 className="font-semibold text-green-800 mb-2">Avantages Concurrentiels</h4>
+            <h4 className="font-semibold text-green-800 mb-2">Avantages Concurrentiels Spécifiques</h4>
             <ul className="text-sm text-green-700 space-y-1">
-              <li>• Localisation privilégiée sur la D627 avec accès direct</li>
-              <li>• Technologies Istobal dernière génération</li>
-              <li>• Approche écoresponsable unique dans la région</li>
-              <li>• Gamme complète de services (5 programmes de lavage)</li>
-              <li>• Absence de concurrence directe sur Leucate</li>
-              <li>• Synergies avec l'écosystème commercial local</li>
+              <li>• Première station de lavage moderne directement sur Leucate</li>
+              <li>• Technologies Istobal dernière génération avec éclairage LED spectaculaire</li>
+              <li>• Approche écoresponsable unique avec recyclage d'eau</li>
+              <li>• Gamme complète : 5 programmes de portique + self-service + services complémentaires</li>
+              <li>• Position géographique optimale au rond-point central D627</li>
+              <li>• Projet validé et inscrit à l'ordre du jour de la mairie de Leucate</li>
+              <li>• Synergie avec l'écosystème commercial local (zone artisanale + village)</li>
             </ul>
           </div>
         </CardContent>
@@ -252,7 +267,7 @@ const MarketStudy = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                  <span>Développement de la zone artisanale de Leucate</span>
+                  <span>Développement continu de la zone artisanale de Leucate</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
