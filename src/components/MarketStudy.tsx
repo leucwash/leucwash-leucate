@@ -5,7 +5,7 @@ import { TrendingUp, Target, MapPin, Calendar, Building2, ShoppingCart } from "l
 
 const MarketStudy = () => {
   const demographicData = [
-    { period: "Hiver", residents: 5300, tourists: 2000, total: 7300 },
+    { period: "Hiver", residents: 5300, tourists: 0, total: 5300 },
     { period: "Printemps", residents: 5300, tourists: 15000, total: 20300 },
     { period: "Été", residents: 5300, tourists: 74700, total: 80000 },
     { period: "Automne", residents: 5300, tourists: 8000, total: 13300 }
@@ -24,12 +24,13 @@ const MarketStudy = () => {
     { segment: "Passage D627", value: 5, color: "#EF4444" }
   ];
 
-  // Zone artisanale businesses
+  // Zone artisanale businesses - corrigé avec les vraies entreprises
   const zoneArtisanaleBusinesses = [
     { category: "Services d'urgence", business: "Pompiers", icon: "🚒" },
-    { category: "Automobile", business: "Garage auto dépannage Leucice Glaçon", icon: "🔧" },
-    { category: "Sport & Loisirs", business: "Club Fitness", icon: "💪" },
-    { category: "Nautisme", business: "Entreprise de voilerie", icon: "⛵" },
+    { category: "Glaçons", business: "Leucice - Fabrication de glaçons", icon: "🧊" },
+    { category: "Sport & Loisirs", business: "P42 Club Fitness", icon: "💪" },
+    { category: "Nautisme", business: "Leucate Voilerie", icon: "⛵" },
+    { category: "Automobile", business: "Garage de l'Étang", icon: "🔧" },
     { category: "Restauration", business: "Cave à bières", icon: "🍺" },
     { category: "Restauration", business: "Plats à emporter asiatique", icon: "🥡" }
   ];
@@ -41,13 +42,9 @@ const MarketStudy = () => {
     { category: "Commerces", business: "Commerces de proximité", icon: "🏪" },
     { category: "Services", business: "Mairie de Leucate", icon: "🏛️" },
     { category: "Tourisme", business: "Office de tourisme", icon: "ℹ️" },
-    { category: "Restauration", business: "Restaurants locaux", icon: "🍽️" }
-  ];
-
-  const locationAdvantages = [
-    { zone: "Zone artisanale", description: "Concentration d'entreprises et de services", color: "fuchsia" },
-    { zone: "Côté village", description: "Station-service et Carrefour City", color: "pink" },
-    { zone: "Rond-point central", description: "Accès direct depuis la D627", color: "purple" }
+    { category: "Restauration", business: "Restaurants locaux", icon: "🍽️" },
+    { category: "Services", business: "Pharmacie", icon: "💊" },
+    { category: "Services", business: "Banque", icon: "🏦" }
   ];
 
   return (
@@ -134,10 +131,11 @@ const MarketStudy = () => {
                 <div>
                   <h5 className="font-medium text-fuchsia-700 mb-1">Synergies Commerciales</h5>
                   <ul className="text-sm text-fuchsia-600 space-y-1">
-                    <li>• Clientèle du garage auto (entretien véhicules)</li>
-                    <li>• Employés des entreprises locales</li>
-                    <li>• Membres du club fitness</li>
+                    <li>• Clientèle du Garage de l'Étang (entretien véhicules)</li>
+                    <li>• Employés des entreprises locales (P42, Leucice, Voilerie)</li>
+                    <li>• Membres du club fitness P42</li>
                     <li>• Flux de la zone de restauration</li>
+                    <li>• Personnel des services d'urgence</li>
                   </ul>
                 </div>
                 <div>
@@ -155,11 +153,35 @@ const MarketStudy = () => {
         </CardContent>
       </Card>
 
-      {/* Potentiel de Marché */}
+      {/* Soutien Institutionnel */}
       <Card className="border-l-4 border-l-green-500">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <TrendingUp className="h-5 w-5 text-green-500" />
+            <MapPin className="h-5 w-5 text-green-500" />
+            Soutien Institutionnel
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="p-4 bg-green-50 rounded-lg border border-green-200">
+            <h4 className="font-semibold text-green-800 mb-2">Mairie de Leucate</h4>
+            <p className="text-sm text-green-700 mb-2">
+              <strong>Projet approuvé à l'ordre du jour</strong> de la mairie de Leucate
+            </p>
+            <ul className="text-sm text-green-600 space-y-1">
+              <li>• Validation du projet en cours</li>
+              <li>• Soutien au développement économique local</li>
+              <li>• Intégration dans la stratégie touristique</li>
+              <li>• Respect des normes environnementales</li>
+            </ul>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Potentiel de Marché */}
+      <Card className="border-l-4 border-l-purple-500">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <TrendingUp className="h-5 w-5 text-purple-500" />
             Répartition du Potentiel de Marché
           </CardTitle>
         </CardHeader>
@@ -232,14 +254,69 @@ const MarketStudy = () => {
           <div className="mt-6 p-4 bg-green-50 rounded-lg">
             <h4 className="font-semibold text-green-800 mb-2">Avantages Concurrentiels Spécifiques</h4>
             <ul className="text-sm text-green-700 space-y-1">
-              <li>• Première station de lavage moderne directement sur Leucate</li>
-              <li>• Technologies Istobal dernière génération avec éclairage LED spectaculaire</li>
-              <li>• Approche écoresponsable unique avec recyclage d'eau</li>
-              <li>• Gamme complète : 5 programmes de portique + self-service + services complémentaires</li>
-              <li>• Position géographique optimale au rond-point central D627</li>
-              <li>• Projet validé et inscrit à l'ordre du jour de la mairie de Leucate</li>
-              <li>• Synergie avec l'écosystème commercial local (zone artisanale + village)</li>
+              <li>• <strong>Monopole local :</strong> Première et seule station de lavage moderne directement sur Leucate</li>
+              <li>• <strong>Technologie premium :</strong> Équipements Istobal dernière génération avec éclairage LED spectaculaire</li>
+              <li>• <strong>Approche écoresponsable unique :</strong> Système de recyclage d'eau avec récupération des hydrocarbures</li>
+              <li>• <strong>Gamme complète :</strong> 5 programmes de portique (8€ à 24€) + 2 pistes self-service + 8 aspirateurs + services complémentaires</li>
+              <li>• <strong>Position géographique optimale :</strong> Rond-point central D627 entre zone artisanale et village</li>
+              <li>• <strong>Validation institutionnelle :</strong> Projet approuvé à l'ordre du jour de la mairie de Leucate</li>
+              <li>• <strong>Écosystème commercial favorable :</strong> Synergie avec entreprises locales et flux touristique</li>
+              <li>• <strong>Finition céramique exclusive :</strong> Programme VIP à 24€ unique sur le marché local</li>
             </ul>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Stratégie Marketing Optimisée */}
+      <Card className="border-l-4 border-l-blue-500">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <ShoppingCart className="h-5 w-5 text-blue-500" />
+            Stratégie Marketing et Communication
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 className="font-semibold mb-3 text-blue-800">Approche Freelance Optimisée</h4>
+              <div className="space-y-3">
+                <div className="p-3 bg-blue-50 rounded-lg">
+                  <p className="font-medium text-blue-800">Marketing Digital (2 500€)</p>
+                  <ul className="text-xs text-blue-700 mt-1 space-y-1">
+                    <li>• Site web professionnel responsive</li>
+                    <li>• Réseaux sociaux (Facebook, Instagram)</li>
+                    <li>• Référencement local SEO</li>
+                    <li>• Campagnes Google Ads ciblées</li>
+                  </ul>
+                </div>
+                <div className="p-3 bg-green-50 rounded-lg">
+                  <p className="font-medium text-green-800">Communication Locale (1 500€)</p>
+                  <ul className="text-xs text-green-700 mt-1 space-y-1">
+                    <li>• Flyers et affichage local</li>
+                    <li>• Partenariats entreprises zone</li>
+                    <li>• Événement d'inauguration</li>
+                    <li>• Cartes de fidélité</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-3 text-purple-800">Avantages Approche Freelance</h4>
+              <div className="space-y-2">
+                <div className="p-3 bg-purple-50 rounded-lg">
+                  <p className="font-medium text-purple-800">Économies substantielles</p>
+                  <p className="text-sm text-purple-700">Réduction de 60% vs agence traditionnelle</p>
+                </div>
+                <div className="p-3 bg-orange-50 rounded-lg">
+                  <p className="font-medium text-orange-800">Flexibilité maximale</p>
+                  <p className="text-sm text-orange-700">Adaptation rapide aux résultats</p>
+                </div>
+                <div className="p-3 bg-pink-50 rounded-lg">
+                  <p className="font-medium text-pink-800">ROI optimisé</p>
+                  <p className="text-sm text-pink-700">Budget total : 4 000€ au lieu de 10 000€</p>
+                </div>
+              </div>
+            </div>
           </div>
         </CardContent>
       </Card>
@@ -280,11 +357,11 @@ const MarketStudy = () => {
               <div className="space-y-3">
                 <div className="p-3 bg-blue-50 rounded">
                   <p className="font-medium text-blue-800">Haute Saison (Juin-Septembre)</p>
-                  <p className="text-sm text-blue-700">Chiffre d'affaires potentiel x5</p>
+                  <p className="text-sm text-blue-700">Chiffre d'affaires potentiel x15 avec 80 000 personnes</p>
                 </div>
                 <div className="p-3 bg-yellow-50 rounded">
                   <p className="font-medium text-yellow-800">Basse Saison (Octobre-Mai)</p>
-                  <p className="text-sm text-yellow-700">Clientèle locale fidélisée</p>
+                  <p className="text-sm text-yellow-700">Clientèle locale fidélisée de 5 300 habitants</p>
                 </div>
               </div>
             </div>

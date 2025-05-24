@@ -45,58 +45,145 @@ const ProjectOverview = () => {
         </CardContent>
       </Card>
 
-      {/* Services avec images réelles */}
+      {/* Services avec détails complets */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Droplets className="h-5 w-5 text-blue-500" />
-            Gamme de Services
+            Gamme de Services Premium
           </CardTitle>
-          <CardDescription>Solutions complètes de lavage automobile</CardDescription>
+          <CardDescription>Solutions complètes de lavage automobile haute technologie</CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
-              <img 
-                src="/lovable-uploads/136b8ef4-ce47-4957-b4e4-09238d691006.png" 
-                alt="Portiques Istobal automatiques"
-                className="w-full h-32 object-cover rounded-lg mb-3"
-              />
-              <h4 className="font-semibold text-fuchsia-800 mb-2">Portiques Automatiques</h4>
-              <div className="text-xs text-gray-600 space-y-1">
-                <p>• Programme Express (5€)</p>
-                <p>• Programme Confort (8€)</p>
-                <p>• Programme Premium (12€)</p>
-                <p>• Programme Luxe (15€)</p>
-                <p>• Programme VIP (20€)</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="col-span-full lg:col-span-2">
+              <div className="text-center mb-4">
+                <img 
+                  src="/lovable-uploads/136b8ef4-ce47-4957-b4e4-09238d691006.png" 
+                  alt="Portiques Istobal automatiques"
+                  className="w-full h-40 object-cover rounded-lg mb-3"
+                />
+                <h4 className="font-semibold text-fuchsia-800 mb-3">Portiques Automatiques Premium</h4>
+              </div>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-3">
+                  <div className="p-3 bg-blue-50 rounded-lg border border-blue-200">
+                    <p className="font-semibold text-blue-800">Programme Express - 8€</p>
+                    <ul className="text-xs text-blue-700 mt-1 space-y-1">
+                      <li>• Prélavage haute pression</li>
+                      <li>• Lavage shampoing actif</li>
+                      <li>• Rinçage osmosé</li>
+                      <li>• Séchage soufflerie</li>
+                    </ul>
+                  </div>
+                  <div className="p-3 bg-green-50 rounded-lg border border-green-200">
+                    <p className="font-semibold text-green-800">Programme Confort - 12€</p>
+                    <ul className="text-xs text-green-700 mt-1 space-y-1">
+                      <li>• Prélavage haute pression</li>
+                      <li>• Lavage shampoing premium</li>
+                      <li>• Rinçage cire protectrice</li>
+                      <li>• Rinçage osmosé</li>
+                      <li>• Séchage soufflerie renforcé</li>
+                    </ul>
+                  </div>
+                  <div className="p-3 bg-purple-50 rounded-lg border border-purple-200">
+                    <p className="font-semibold text-purple-800">Programme Premium - 16€</p>
+                    <ul className="text-xs text-purple-700 mt-1 space-y-1">
+                      <li>• Prélavage décontaminant</li>
+                      <li>• Lavage shampoing nacrée</li>
+                      <li>• Cire protection longue durée</li>
+                      <li>• Traitement jantes spécifique</li>
+                      <li>• Rinçage osmosé brillance</li>
+                      <li>• Séchage soufflerie premium</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="p-3 bg-orange-50 rounded-lg border border-orange-200">
+                    <p className="font-semibold text-orange-800">Programme Luxe - 18€</p>
+                    <ul className="text-xs text-orange-700 mt-1 space-y-1">
+                      <li>• Prélavage décontaminant renforcé</li>
+                      <li>• Lavage shampoing triple action</li>
+                      <li>• Cire protection céramique</li>
+                      <li>• Traitement jantes premium</li>
+                      <li>• Polish anti-traces</li>
+                      <li>• Rinçage osmosé ultra-pur</li>
+                      <li>• Séchage soufflerie haute performance</li>
+                    </ul>
+                  </div>
+                  <div className="p-3 bg-gradient-to-r from-yellow-50 to-amber-50 rounded-lg border border-yellow-300">
+                    <p className="font-semibold text-yellow-800">Programme VIP Céramique - 24€</p>
+                    <ul className="text-xs text-yellow-700 mt-1 space-y-1">
+                      <li>• Prélavage décontaminant professionnel</li>
+                      <li>• Lavage shampoing haute technologie</li>
+                      <li>• Finition céramique nano-protection</li>
+                      <li>• Traitement jantes céramique</li>
+                      <li>• Polish diamond brillance</li>
+                      <li>• Protection longue durée 6 mois</li>
+                      <li>• Rinçage osmosé ultra-pur</li>
+                      <li>• Séchage soufflerie professionnelle</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="text-center">
-              <img 
-                src="/lovable-uploads/3f284cd4-a120-4372-8563-6dac6b1f81d3.png" 
-                alt="Pistes haute pression"
-                className="w-full h-32 object-cover rounded-lg mb-3"
-              />
-              <h4 className="font-semibold text-fuchsia-800 mb-2">Pistes Haute Pression</h4>
-              <p className="text-sm text-gray-600">4 pistes de lavage self-service</p>
+            
+            <div className="space-y-6">
+              <div className="text-center">
+                <img 
+                  src="/lovable-uploads/3f284cd4-a120-4372-8563-6dac6b1f81d3.png" 
+                  alt="Pistes haute pression"
+                  className="w-full h-32 object-cover rounded-lg mb-3"
+                />
+                <h4 className="font-semibold text-fuchsia-800 mb-2">2 Pistes Haute Pression</h4>
+                <div className="text-xs text-gray-600 space-y-2 text-left">
+                  <div className="p-2 bg-blue-50 rounded">
+                    <p className="font-medium text-blue-800">Canon à mousse actif</p>
+                    <p>Mousse décontaminante haute adhérence pour prélavage optimal</p>
+                  </div>
+                  <div className="p-2 bg-green-50 rounded">
+                    <p className="font-medium text-green-800">Produit jantes spécialisé</p>
+                    <p>Dégraissant professionnel anti-pollution de freinage</p>
+                  </div>
+                  <div className="p-2 bg-purple-50 rounded">
+                    <p className="font-medium text-purple-800">Multi-programmes</p>
+                    <p>Rinçage, shampoing, cire, dégraissant moteur</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <img 
+                  src="/lovable-uploads/6defc244-9937-498d-b2b2-93899b7c265a.png" 
+                  alt="Aspiration Istobal"
+                  className="w-full h-32 object-cover rounded-lg mb-3"
+                />
+                <h4 className="font-semibold text-fuchsia-800 mb-2">8 Pistes d'Aspiration</h4>
+                <div className="text-xs text-gray-600 space-y-1 text-left">
+                  <p>• Aspirateurs haute performance Istobal</p>
+                  <p>• Puissance d'aspiration professionnelle</p>
+                  <p>• Embouts spécialisés sièges et tapis</p>
+                  <p>• Système anti-colmatage</p>
+                </div>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="w-full h-32 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg mb-3 flex items-center justify-center">
-                <Wind className="h-12 w-12 text-blue-600" />
-              </div>
-              <h4 className="font-semibold text-fuchsia-800 mb-2">Aspiration</h4>
-              <p className="text-sm text-gray-600">2 pistes d'aspiration haute performance</p>
+          </div>
+          
+          <div className="mt-6 grid md:grid-cols-3 gap-4">
+            <div className="text-center p-4 bg-gradient-to-br from-green-100 to-green-200 rounded-lg">
+              <Car className="h-8 w-8 text-green-600 mx-auto mb-2" />
+              <h4 className="font-semibold text-green-800 mb-2">Gonflage Pneus</h4>
+              <p className="text-sm text-green-700">Station de gonflage automatique avec manomètre digital</p>
             </div>
-            <div className="text-center">
-              <div className="w-full h-32 bg-gradient-to-br from-green-100 to-green-200 rounded-lg mb-3 flex items-center justify-center">
-                <Car className="h-12 w-12 text-green-600" />
-              </div>
-              <h4 className="font-semibold text-fuchsia-800 mb-2">Services Complémentaires</h4>
-              <div className="text-xs text-gray-600 space-y-1">
-                <p>• Gonflage des pneus</p>
-                <p>• Souffleur</p>
-                <p>• Parfumeur d'habitacle</p>
-              </div>
+            <div className="text-center p-4 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg">
+              <Wind className="h-8 w-8 text-blue-600 mx-auto mb-2" />
+              <h4 className="font-semibold text-blue-800 mb-2">Souffleur</h4>
+              <p className="text-sm text-blue-700">Soufflerie haute pression pour séchage complémentaire</p>
+            </div>
+            <div className="text-center p-4 bg-gradient-to-br from-purple-100 to-purple-200 rounded-lg">
+              <Sparkles className="h-8 w-8 text-purple-600 mx-auto mb-2" />
+              <h4 className="font-semibold text-purple-800 mb-2">Parfumeur d'Habitacle</h4>
+              <p className="text-sm text-purple-700">Gamme de parfums premium pour habitacle</p>
             </div>
           </div>
         </CardContent>
@@ -131,6 +218,57 @@ const ProjectOverview = () => {
               <div className="p-4 bg-purple-50 rounded-lg">
                 <h4 className="font-semibold text-purple-800 mb-2">Environnement</h4>
                 <p className="text-sm text-purple-700">Proximité immédiate des services : garage, fitness, restauration</p>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Système de Recyclage Écologique */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Droplets className="h-5 w-5 text-blue-500" />
+            Système de Recyclage Écoresponsable
+          </CardTitle>
+          <CardDescription>Technologie environnementale avancée</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <img 
+                src="/lovable-uploads/d344d3ba-eb87-47b8-91a4-84e43e8958d9.png" 
+                alt="Système de recyclage Istobal"
+                className="w-full h-48 object-cover rounded-lg mb-4"
+              />
+            </div>
+            <div className="space-y-4">
+              <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
+                <h4 className="font-semibold text-blue-800 mb-2">Récupération des Hydrocarbures</h4>
+                <ul className="text-sm text-blue-700 space-y-1">
+                  <li>• Séparateur d'hydrocarbures automatique</li>
+                  <li>• Traitement des eaux polluées</li>
+                  <li>• Respect normes environnementales</li>
+                  <li>• Évacuation sécurisée des résidus</li>
+                </ul>
+              </div>
+              <div className="p-4 bg-green-50 rounded-lg border border-green-200">
+                <h4 className="font-semibold text-green-800 mb-2">Économies d'Eau</h4>
+                <ul className="text-sm text-green-700 space-y-1">
+                  <li>• Recyclage de 80% de l'eau utilisée</li>
+                  <li>• Système de filtration multi-étapes</li>
+                  <li>• Réduction de la consommation de 60%</li>
+                  <li>• Réutilisation pour prélavage</li>
+                </ul>
+              </div>
+              <div className="p-4 bg-purple-50 rounded-lg border border-purple-200">
+                <h4 className="font-semibold text-purple-800 mb-2">Impact Environnemental</h4>
+                <ul className="text-sm text-purple-700 space-y-1">
+                  <li>• Réduction empreinte carbone</li>
+                  <li>• Produits biodégradables</li>
+                  <li>• Gestion responsable des déchets</li>
+                  <li>• Certification éco-responsable</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -187,7 +325,7 @@ const ProjectOverview = () => {
               <div>
                 <p className="text-sm text-orange-700 mb-1"><strong>Support technique :</strong> Formation incluse</p>
                 <p className="text-sm text-orange-700 mb-1"><strong>Garantie :</strong> Équipements dernière génération</p>
-                <p className="text-sm text-orange-700"><strong>Validation :</strong> Projet à l'ordre du jour de la mairie de Leucate</p>
+                <p className="text-sm text-orange-700"><strong>Validation :</strong> Projet approuvé à l'ordre du jour</p>
               </div>
             </div>
           </div>
