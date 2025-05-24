@@ -154,7 +154,7 @@ const ProjectOverview = () => {
               
               <div className="text-center">
                 <img 
-                  src="/lovable-uploads/6defc244-9937-498d-b2b2-93899b7c265a.png" 
+                  src="/lovable-uploads/6962fa8f-0603-40c2-ad9e-6faf280bca59.png" 
                   alt="Aspiration Istobal"
                   className="w-full h-32 object-cover rounded-lg mb-3"
                 />
@@ -217,7 +217,7 @@ const ProjectOverview = () => {
               </div>
               <div className="p-4 bg-purple-50 rounded-lg">
                 <h4 className="font-semibold text-purple-800 mb-2">Environnement</h4>
-                <p className="text-sm text-purple-700">Proximité immédiate des services : garage, fitness, restauration</p>
+                <p className="text-sm text-purple-700">Proximité immédiate des services : garage, cave à bières, restauration</p>
               </div>
             </div>
           </div>
@@ -374,7 +374,7 @@ const ProjectOverview = () => {
               <div className="mt-6 p-4 bg-green-50 rounded-lg border border-green-200">
                 <h4 className="font-semibold text-green-800 mb-2">Coûts d'Exploitation Optimisés</h4>
                 <div className="space-y-2">
-                  <p className="text-sm text-green-700"><strong>Maintenance mensuelle :</strong> 800€</p>
+                  <p className="text-sm text-green-700"><strong>Maintenance mensuelle :</strong> 1 200€</p>
                   <p className="text-xs text-green-600">• Coûts réduits grâce à la technologie Istobal</p>
                   <p className="text-xs text-green-600">• Maintenance préventive incluse</p>
                   <p className="text-xs text-green-600">• Support technique 24h/24</p>

@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 import { TrendingUp, Target, MapPin, Calendar, Building2, ShoppingCart } from "lucide-react";
@@ -131,7 +132,7 @@ const MarketStudy = () => {
                   <ul className="text-sm text-fuchsia-600 space-y-1">
                     <li>• Clientèle du Garage de l'Étang (entretien véhicules)</li>
                     <li>• Employés des entreprises locales (P42, Leucice, Voilerie)</li>
-                    <li>• Membres du club fitness P42</li>
+                    <li>• Clientèle de la cave à bières P42</li>
                     <li>• Flux de la zone de restauration</li>
                     <li>• Personnel des services d'urgence</li>
                   </ul>
@@ -279,7 +280,7 @@ const MarketStudy = () => {
               <h4 className="font-semibold mb-3 text-blue-800">Approche Freelance Optimisée</h4>
               <div className="space-y-3">
                 <div className="p-3 bg-blue-50 rounded-lg">
-                  <p className="font-medium text-blue-800">Marketing Digital (1 500€)</p>
+                  <p className="font-medium text-blue-800">Marketing Digital (1 200€)</p>
                   <ul className="text-xs text-blue-700 mt-1 space-y-1">
                     <li>• Site web professionnel responsive</li>
                     <li>• Réseaux sociaux (Facebook, Instagram)</li>
@@ -288,7 +289,7 @@ const MarketStudy = () => {
                   </ul>
                 </div>
                 <div className="p-3 bg-green-50 rounded-lg">
-                  <p className="font-medium text-green-800">Communication Locale (800€)</p>
+                  <p className="font-medium text-green-800">Communication Locale (600€)</p>
                   <ul className="text-xs text-green-700 mt-1 space-y-1">
                     <li>• Flyers et affichage local</li>
                     <li>• Partenariats entreprises zone</li>
@@ -303,7 +304,7 @@ const MarketStudy = () => {
               <div className="space-y-2">
                 <div className="p-3 bg-purple-50 rounded-lg">
                   <p className="font-medium text-purple-800">Économies substantielles</p>
-                  <p className="text-sm text-purple-700">Réduction de 70% vs agence traditionnelle</p>
+                  <p className="text-sm text-purple-700">Réduction de 75% vs agence traditionnelle</p>
                 </div>
                 <div className="p-3 bg-orange-50 rounded-lg">
                   <p className="font-medium text-orange-800">Flexibilité maximale</p>
@@ -311,7 +312,7 @@ const MarketStudy = () => {
                 </div>
                 <div className="p-3 bg-pink-50 rounded-lg">
                   <p className="font-medium text-pink-800">ROI optimisé</p>
-                  <p className="text-sm text-pink-700">Budget total : 2 300€ au lieu de 8 000€</p>
+                  <p className="text-sm text-pink-700">Budget total : 1 800€ au lieu de 7 200€</p>
                 </div>
               </div>
             </div>
