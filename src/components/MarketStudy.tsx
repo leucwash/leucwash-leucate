@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 import { TrendingUp, Target, MapPin, Calendar, Building2, ShoppingCart } from "lucide-react";
@@ -12,9 +11,9 @@ const MarketStudy = () => {
   ];
 
   const competitionData = [
-    { name: "Station existante 1", distance: "15 km", type: "Traditionnelle" },
+    { name: "Station Port Leucate", distance: "15 km", type: "1 portique Lidl sans recyclage (fermée par arrêté préfectoral)" },
     { name: "Station existante 2", distance: "22 km", type: "Self-service" },
-    { name: "Leucwash", distance: "0 km", type: "Éco-moderne" }
+    { name: "Leucwash", distance: "0 km", type: "Éco-moderne premium" }
   ];
 
   const marketPotential = [
@@ -24,14 +23,13 @@ const MarketStudy = () => {
     { segment: "Passage D627", value: 5, color: "#EF4444" }
   ];
 
-  // Zone artisanale businesses - corrigé avec les vraies entreprises
+  // Zone artisanale businesses - corrigé
   const zoneArtisanaleBusinesses = [
     { category: "Services d'urgence", business: "Pompiers", icon: "🚒" },
     { category: "Glaçons", business: "Leucice - Fabrication de glaçons", icon: "🧊" },
-    { category: "Sport & Loisirs", business: "P42 Club Fitness", icon: "💪" },
+    { category: "Sport & Loisirs", business: "P42 - Cave à bières", icon: "🍺" },
     { category: "Nautisme", business: "Leucate Voilerie", icon: "⛵" },
     { category: "Automobile", business: "Garage de l'Étang", icon: "🔧" },
-    { category: "Restauration", business: "Cave à bières", icon: "🍺" },
     { category: "Restauration", business: "Plats à emporter asiatique", icon: "🥡" }
   ];
 
@@ -238,10 +236,10 @@ const MarketStudy = () => {
           <div className="grid gap-4">
             {competitionData.map((competitor, index) => (
               <div key={index} className={`p-4 rounded-lg border ${index === 2 ? 'bg-orange-50 border-orange-200' : 'bg-gray-50 border-gray-200'}`}>
-                <div className="flex justify-between items-center">
-                  <div>
+                <div className="flex justify-between items-start">
+                  <div className="flex-1">
                     <h4 className="font-semibold">{competitor.name}</h4>
-                    <p className="text-sm text-gray-600">Type: {competitor.type}</p>
+                    <p className="text-sm text-gray-600">{competitor.type}</p>
                   </div>
                   <div className="text-right">
                     <p className="font-semibold">{competitor.distance}</p>
@@ -254,14 +252,14 @@ const MarketStudy = () => {
           <div className="mt-6 p-4 bg-green-50 rounded-lg">
             <h4 className="font-semibold text-green-800 mb-2">Avantages Concurrentiels Spécifiques</h4>
             <ul className="text-sm text-green-700 space-y-1">
-              <li>• <strong>Monopole local :</strong> Première et seule station de lavage moderne directement sur Leucate</li>
-              <li>• <strong>Technologie premium :</strong> Équipements Istobal dernière génération avec éclairage LED spectaculaire</li>
+              <li>• <strong>Monopole local absolu :</strong> Première et seule station de lavage moderne opérationnelle sur Leucate</li>
+              <li>• <strong>Technologie premium Istobal :</strong> Équipements dernière génération avec éclairage LED spectaculaire</li>
               <li>• <strong>Approche écoresponsable unique :</strong> Système de recyclage d'eau avec récupération des hydrocarbures</li>
-              <li>• <strong>Gamme complète :</strong> 5 programmes de portique (8€ à 24€) + 2 pistes self-service + 8 aspirateurs + services complémentaires</li>
+              <li>• <strong>Gamme complète exclusive :</strong> 5 programmes de portique (8€ à 24€) + 2 pistes self-service + 2 aspirateurs + services complémentaires</li>
               <li>• <strong>Position géographique optimale :</strong> Rond-point central D627 entre zone artisanale et village</li>
               <li>• <strong>Validation institutionnelle :</strong> Projet approuvé à l'ordre du jour de la mairie de Leucate</li>
               <li>• <strong>Écosystème commercial favorable :</strong> Synergie avec entreprises locales et flux touristique</li>
-              <li>• <strong>Finition céramique exclusive :</strong> Programme VIP à 24€ unique sur le marché local</li>
+              <li>• <strong>Finition céramique exclusive :</strong> Programme VIP à 24€ unique sur le marché local avec protection 2 mois</li>
             </ul>
           </div>
         </CardContent>
@@ -281,7 +279,7 @@ const MarketStudy = () => {
               <h4 className="font-semibold mb-3 text-blue-800">Approche Freelance Optimisée</h4>
               <div className="space-y-3">
                 <div className="p-3 bg-blue-50 rounded-lg">
-                  <p className="font-medium text-blue-800">Marketing Digital (2 500€)</p>
+                  <p className="font-medium text-blue-800">Marketing Digital (1 500€)</p>
                   <ul className="text-xs text-blue-700 mt-1 space-y-1">
                     <li>• Site web professionnel responsive</li>
                     <li>• Réseaux sociaux (Facebook, Instagram)</li>
@@ -290,7 +288,7 @@ const MarketStudy = () => {
                   </ul>
                 </div>
                 <div className="p-3 bg-green-50 rounded-lg">
-                  <p className="font-medium text-green-800">Communication Locale (1 500€)</p>
+                  <p className="font-medium text-green-800">Communication Locale (800€)</p>
                   <ul className="text-xs text-green-700 mt-1 space-y-1">
                     <li>• Flyers et affichage local</li>
                     <li>• Partenariats entreprises zone</li>
@@ -305,7 +303,7 @@ const MarketStudy = () => {
               <div className="space-y-2">
                 <div className="p-3 bg-purple-50 rounded-lg">
                   <p className="font-medium text-purple-800">Économies substantielles</p>
-                  <p className="text-sm text-purple-700">Réduction de 60% vs agence traditionnelle</p>
+                  <p className="text-sm text-purple-700">Réduction de 70% vs agence traditionnelle</p>
                 </div>
                 <div className="p-3 bg-orange-50 rounded-lg">
                   <p className="font-medium text-orange-800">Flexibilité maximale</p>
@@ -313,7 +311,7 @@ const MarketStudy = () => {
                 </div>
                 <div className="p-3 bg-pink-50 rounded-lg">
                   <p className="font-medium text-pink-800">ROI optimisé</p>
-                  <p className="text-sm text-pink-700">Budget total : 4 000€ au lieu de 10 000€</p>
+                  <p className="text-sm text-pink-700">Budget total : 2 300€ au lieu de 8 000€</p>
                 </div>
               </div>
             </div>

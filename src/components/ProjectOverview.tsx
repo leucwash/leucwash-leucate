@@ -71,7 +71,7 @@ const ProjectOverview = () => {
                     <p className="font-semibold text-blue-800">Programme Express - 8€</p>
                     <ul className="text-xs text-blue-700 mt-1 space-y-1">
                       <li>• Prélavage haute pression</li>
-                      <li>• Lavage shampoing actif</li>
+                      <li>• Lavage mousse active</li>
                       <li>• Rinçage osmosé</li>
                       <li>• Séchage soufflerie</li>
                     </ul>
@@ -80,7 +80,7 @@ const ProjectOverview = () => {
                     <p className="font-semibold text-green-800">Programme Confort - 12€</p>
                     <ul className="text-xs text-green-700 mt-1 space-y-1">
                       <li>• Prélavage haute pression</li>
-                      <li>• Lavage shampoing premium</li>
+                      <li>• Lavage mousse premium</li>
                       <li>• Rinçage cire protectrice</li>
                       <li>• Rinçage osmosé</li>
                       <li>• Séchage soufflerie renforcé</li>
@@ -90,7 +90,7 @@ const ProjectOverview = () => {
                     <p className="font-semibold text-purple-800">Programme Premium - 16€</p>
                     <ul className="text-xs text-purple-700 mt-1 space-y-1">
                       <li>• Prélavage décontaminant</li>
-                      <li>• Lavage shampoing nacrée</li>
+                      <li>• Lavage mousse nacrée</li>
                       <li>• Cire protection longue durée</li>
                       <li>• Traitement jantes spécifique</li>
                       <li>• Rinçage osmosé brillance</li>
@@ -103,8 +103,8 @@ const ProjectOverview = () => {
                     <p className="font-semibold text-orange-800">Programme Luxe - 18€</p>
                     <ul className="text-xs text-orange-700 mt-1 space-y-1">
                       <li>• Prélavage décontaminant renforcé</li>
-                      <li>• Lavage shampoing triple action</li>
-                      <li>• Cire protection céramique</li>
+                      <li>• Lavage mousse triple action</li>
+                      <li>• Cire protection ultra longue durée</li>
                       <li>• Traitement jantes premium</li>
                       <li>• Polish anti-traces</li>
                       <li>• Rinçage osmosé ultra-pur</li>
@@ -115,11 +115,11 @@ const ProjectOverview = () => {
                     <p className="font-semibold text-yellow-800">Programme VIP Céramique - 24€</p>
                     <ul className="text-xs text-yellow-700 mt-1 space-y-1">
                       <li>• Prélavage décontaminant professionnel</li>
-                      <li>• Lavage shampoing haute technologie</li>
+                      <li>• Lavage mousse haute technologie</li>
                       <li>• Finition céramique nano-protection</li>
                       <li>• Traitement jantes céramique</li>
                       <li>• Polish diamond brillance</li>
-                      <li>• Protection longue durée 6 mois</li>
+                      <li>• Protection céramique durée 2 mois</li>
                       <li>• Rinçage osmosé ultra-pur</li>
                       <li>• Séchage soufflerie professionnelle</li>
                     </ul>
@@ -139,15 +139,15 @@ const ProjectOverview = () => {
                 <div className="text-xs text-gray-600 space-y-2 text-left">
                   <div className="p-2 bg-blue-50 rounded">
                     <p className="font-medium text-blue-800">Canon à mousse actif</p>
-                    <p>Mousse décontaminante haute adhérence pour prélavage optimal</p>
+                    <p>Mousse décontaminante haute adhérence pour prélavage optimal avec effet dégraissant professionnel</p>
                   </div>
                   <div className="p-2 bg-green-50 rounded">
                     <p className="font-medium text-green-800">Produit jantes spécialisé</p>
-                    <p>Dégraissant professionnel anti-pollution de freinage</p>
+                    <p>Dégraissant professionnel anti-pollution de freinage, élimination traces tenaces et dépôts de carbone</p>
                   </div>
                   <div className="p-2 bg-purple-50 rounded">
                     <p className="font-medium text-purple-800">Multi-programmes</p>
-                    <p>Rinçage, shampoing, cire, dégraissant moteur</p>
+                    <p>Rinçage, mousse active, cire, dégraissant moteur</p>
                   </div>
                 </div>
               </div>
@@ -158,7 +158,7 @@ const ProjectOverview = () => {
                   alt="Aspiration Istobal"
                   className="w-full h-32 object-cover rounded-lg mb-3"
                 />
-                <h4 className="font-semibold text-fuchsia-800 mb-2">8 Pistes d'Aspiration</h4>
+                <h4 className="font-semibold text-fuchsia-800 mb-2">2 Pistes d'Aspiration</h4>
                 <div className="text-xs text-gray-600 space-y-1 text-left">
                   <p>• Aspirateurs haute performance Istobal</p>
                   <p>• Puissance d'aspiration professionnelle</p>
@@ -173,17 +173,17 @@ const ProjectOverview = () => {
             <div className="text-center p-4 bg-gradient-to-br from-green-100 to-green-200 rounded-lg">
               <Car className="h-8 w-8 text-green-600 mx-auto mb-2" />
               <h4 className="font-semibold text-green-800 mb-2">Gonflage Pneus</h4>
-              <p className="text-sm text-green-700">Station de gonflage automatique avec manomètre digital</p>
+              <p className="text-sm text-green-700">Station de gonflage automatique avec manomètre digital haute précision</p>
             </div>
             <div className="text-center p-4 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg">
               <Wind className="h-8 w-8 text-blue-600 mx-auto mb-2" />
               <h4 className="font-semibold text-blue-800 mb-2">Souffleur</h4>
-              <p className="text-sm text-blue-700">Soufflerie haute pression pour séchage complémentaire</p>
+              <p className="text-sm text-blue-700">Soufflerie haute pression pour séchage complémentaire intérieur et extérieur</p>
             </div>
             <div className="text-center p-4 bg-gradient-to-br from-purple-100 to-purple-200 rounded-lg">
               <Sparkles className="h-8 w-8 text-purple-600 mx-auto mb-2" />
               <h4 className="font-semibold text-purple-800 mb-2">Parfumeur d'Habitacle</h4>
-              <p className="text-sm text-purple-700">Gamme de parfums premium pour habitacle</p>
+              <p className="text-sm text-purple-700">Gamme de parfums premium pour habitacle : vanille, océan, pin, citron</p>
             </div>
           </div>
         </CardContent>
@@ -231,7 +231,7 @@ const ProjectOverview = () => {
             <Droplets className="h-5 w-5 text-blue-500" />
             Système de Recyclage Écoresponsable
           </CardTitle>
-          <CardDescription>Technologie environnementale avancée</CardDescription>
+          <CardDescription>Technologie environnementale avancée Istobal</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-2 gap-6">
@@ -246,28 +246,31 @@ const ProjectOverview = () => {
               <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
                 <h4 className="font-semibold text-blue-800 mb-2">Récupération des Hydrocarbures</h4>
                 <ul className="text-sm text-blue-700 space-y-1">
-                  <li>• Séparateur d'hydrocarbures automatique</li>
-                  <li>• Traitement des eaux polluées</li>
-                  <li>• Respect normes environnementales</li>
-                  <li>• Évacuation sécurisée des résidus</li>
+                  <li>• Séparateur d'hydrocarbures automatique Istobal</li>
+                  <li>• Traitement des eaux polluées par décantation</li>
+                  <li>• Filtration multi-étapes des résidus</li>
+                  <li>• Respect strict normes environnementales</li>
+                  <li>• Évacuation sécurisée certifiée</li>
                 </ul>
               </div>
               <div className="p-4 bg-green-50 rounded-lg border border-green-200">
-                <h4 className="font-semibold text-green-800 mb-2">Économies d'Eau</h4>
+                <h4 className="font-semibold text-green-800 mb-2">Économies d'Eau Exceptionnelles</h4>
                 <ul className="text-sm text-green-700 space-y-1">
-                  <li>• Recyclage de 80% de l'eau utilisée</li>
-                  <li>• Système de filtration multi-étapes</li>
-                  <li>• Réduction de la consommation de 60%</li>
-                  <li>• Réutilisation pour prélavage</li>
+                  <li>• Recyclage de 85% de l'eau utilisée</li>
+                  <li>• Système de filtration Istobal 4 étapes</li>
+                  <li>• Réduction consommation de 70%</li>
+                  <li>• Réutilisation optimisée pour prélavage</li>
+                  <li>• Économies annuelles : 15 000€</li>
                 </ul>
               </div>
               <div className="p-4 bg-purple-50 rounded-lg border border-purple-200">
-                <h4 className="font-semibold text-purple-800 mb-2">Impact Environnemental</h4>
+                <h4 className="font-semibold text-purple-800 mb-2">Impact Environnemental Positif</h4>
                 <ul className="text-sm text-purple-700 space-y-1">
-                  <li>• Réduction empreinte carbone</li>
-                  <li>• Produits biodégradables</li>
-                  <li>• Gestion responsable des déchets</li>
-                  <li>• Certification éco-responsable</li>
+                  <li>• Réduction empreinte carbone -60%</li>
+                  <li>• Produits 100% biodégradables</li>
+                  <li>• Gestion responsable déchets</li>
+                  <li>• Certification éco-responsable Istobal</li>
+                  <li>• Conformité réglementaire totale</li>
                 </ul>
               </div>
             </div>
@@ -275,7 +278,69 @@ const ProjectOverview = () => {
         </CardContent>
       </Card>
 
-      {/* Équipements Istobal avec images réelles */}
+      {/* Plan Opérationnel */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Clock className="h-5 w-5 text-orange-500" />
+            Plan Opérationnel et Installation
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 className="font-semibold mb-3 text-orange-800">Planning d'Exécution</h4>
+              <div className="space-y-3">
+                <div className="p-3 bg-orange-50 rounded-lg border border-orange-200">
+                  <p className="font-semibold text-orange-800">Phase 1 : Travaux VRD</p>
+                  <p className="text-sm text-orange-700 mb-1"><strong>Durée :</strong> 3 mois</p>
+                  <ul className="text-xs text-orange-600 space-y-1">
+                    <li>• Terrassement et fondations</li>
+                    <li>• Réseaux eau, électricité, évacuation</li>
+                    <li>• Dalles béton et canalisations</li>
+                  </ul>
+                </div>
+                <div className="p-3 bg-blue-50 rounded-lg border border-blue-200">
+                  <p className="font-semibold text-blue-800">Phase 2 : Équipements</p>
+                  <p className="text-sm text-blue-700 mb-1"><strong>Durée :</strong> 1 mois et demi</p>
+                  <ul className="text-xs text-blue-600 space-y-1">
+                    <li>• Montage portiques automatiques</li>
+                    <li>• Installation pistes haute pression</li>
+                    <li>• Mise en place aire d'aspiration</li>
+                    <li>• Tests et mise en service</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-3 text-green-800">Financement du Projet</h4>
+              <div className="space-y-3">
+                <div className="p-4 bg-green-50 rounded-lg border border-green-200">
+                  <p className="font-semibold text-green-800 mb-2">Investissement Total</p>
+                  <p className="text-2xl font-bold text-green-900">687 435,60 €</p>
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="p-3 bg-blue-50 rounded-lg border border-blue-200">
+                    <p className="font-medium text-blue-800">Apport Personnel</p>
+                    <p className="text-lg font-semibold text-blue-900">50 000 €</p>
+                  </div>
+                  <div className="p-3 bg-purple-50 rounded-lg border border-purple-200">
+                    <p className="font-medium text-purple-800">Nantissement</p>
+                    <p className="text-lg font-semibold text-purple-900">280 000 €</p>
+                    <p className="text-xs text-purple-700">Bien immobilier</p>
+                  </div>
+                </div>
+                <div className="p-3 bg-orange-50 rounded-lg border border-orange-200">
+                  <p className="font-medium text-orange-800">Financement Bancaire</p>
+                  <p className="text-lg font-semibold text-orange-900">357 435,60 €</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Équipements Istobal avec maintenance */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -305,6 +370,16 @@ const ProjectOverview = () => {
                   <span>Éclairage LED spectaculaire pour une expérience premium</span>
                 </li>
               </ul>
+              
+              <div className="mt-6 p-4 bg-green-50 rounded-lg border border-green-200">
+                <h4 className="font-semibold text-green-800 mb-2">Coûts d'Exploitation Optimisés</h4>
+                <div className="space-y-2">
+                  <p className="text-sm text-green-700"><strong>Maintenance mensuelle :</strong> 800€</p>
+                  <p className="text-xs text-green-600">• Coûts réduits grâce à la technologie Istobal</p>
+                  <p className="text-xs text-green-600">• Maintenance préventive incluse</p>
+                  <p className="text-xs text-green-600">• Support technique 24h/24</p>
+                </div>
+              </div>
             </div>
             <div>
               <img 
@@ -312,21 +387,6 @@ const ProjectOverview = () => {
                 alt="Équipements Istobal en action"
                 className="w-full h-48 object-cover rounded-lg"
               />
-            </div>
-          </div>
-          <div className="mt-6 p-4 bg-gradient-to-r from-orange-50 to-red-50 rounded-lg border border-orange-200">
-            <h4 className="font-semibold text-orange-800 mb-2">Planning d'Installation</h4>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <p className="text-sm text-orange-700 mb-1"><strong>Génie civil :</strong> 3 mois</p>
-                <p className="text-sm text-orange-700 mb-1"><strong>Installation équipements :</strong> 1 mois et demi</p>
-                <p className="text-sm text-orange-700"><strong>Maintenance :</strong> Coûts réduits grâce à la technologie Istobal</p>
-              </div>
-              <div>
-                <p className="text-sm text-orange-700 mb-1"><strong>Support technique :</strong> Formation incluse</p>
-                <p className="text-sm text-orange-700 mb-1"><strong>Garantie :</strong> Équipements dernière génération</p>
-                <p className="text-sm text-orange-700"><strong>Validation :</strong> Projet approuvé à l'ordre du jour</p>
-              </div>
             </div>
           </div>
         </CardContent>
