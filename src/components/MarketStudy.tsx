@@ -1,11 +1,10 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 import { TrendingUp, Target, MapPin, Calendar, Building2, ShoppingCart } from "lucide-react";
 
 const MarketStudy = () => {
   const demographicData = [
-    { period: "Hiver", residents: 5300, tourists: 0, total: 5300 },
+    { period: "Hiver", residents: 5300, tourists: 2500, total: 7800 },
     { period: "Printemps", residents: 5300, tourists: 15000, total: 20300 },
     { period: "Été", residents: 5300, tourists: 74700, total: 80000 },
     { period: "Automne", residents: 5300, tourists: 8000, total: 13300 }
@@ -19,9 +18,10 @@ const MarketStudy = () => {
 
   const marketPotential = [
     { segment: "Résidents permanents", value: 25, color: "#3B82F6" },
-    { segment: "Touristes été", value: 45, color: "#10B981" },
+    { segment: "Touristes été", value: 40, color: "#10B981" },
     { segment: "Professionnels locaux", value: 25, color: "#F59E0B" },
-    { segment: "Passage D627", value: 5, color: "#EF4444" }
+    { segment: "Touristes hiver/intersaison", value: 7, color: "#8B5CF6" },
+    { segment: "Passage D627", value: 3, color: "#EF4444" }
   ];
 
   // Zone artisanale businesses - mise à jour complète
@@ -58,7 +58,7 @@ const MarketStudy = () => {
             <Target className="h-5 w-5 text-blue-500" />
             Analyse Démographique de Leucate
           </CardTitle>
-          <CardDescription>Évolution de la population selon les saisons</CardDescription>
+          <CardDescription>Évolution de la population selon les saisons - Chalandise réelle</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="h-80 w-full">
@@ -79,8 +79,8 @@ const MarketStudy = () => {
               <p className="text-sm text-blue-700">5 300 habitants toute l'année, représentant une clientèle fidèle et régulière pour les services de lavage automobile.</p>
             </div>
             <div className="p-4 bg-green-50 rounded-lg">
-              <h4 className="font-semibold text-green-800 mb-2">Pic Estival</h4>
-              <p className="text-sm text-green-700">Multiplication par 15 de la population en été (80 000 personnes), créant un potentiel de revenus exceptionnel.</p>
+              <h4 className="font-semibold text-green-800 mb-2">Chalandise Saisonnière</h4>
+              <p className="text-sm text-green-700">Tourisme constant toute l'année : 2 500 en hiver (séjours courts, locations saisonnières) jusqu'à 74 700 en été.</p>
             </div>
           </div>
         </CardContent>
@@ -230,9 +230,10 @@ const MarketStudy = () => {
             <h4 className="font-semibold text-purple-800 mb-2">Justification de la Répartition Affinée</h4>
             <ul className="text-sm text-purple-700 space-y-1">
               <li>• <strong>Résidents (25%) :</strong> Base clientèle fidèle toute l'année</li>
-              <li>• <strong>Touristes (45%) :</strong> Pic saisonnier massif avec pouvoir d'achat élevé</li>
+              <li>• <strong>Touristes été (40%) :</strong> Pic saisonnier massif avec pouvoir d'achat élevé</li>
               <li>• <strong>Professionnels (25%) :</strong> Écosystème local renforcé (2 garages, nautisme, brasserie, services)</li>
-              <li>• <strong>Passage D627 (5%) :</strong> Clientèle de transit occasionnelle</li>
+              <li>• <strong>Touristes hiver/intersaison (7%) :</strong> Tourisme constant même en basse saison</li>
+              <li>• <strong>Passage D627 (3%) :</strong> Clientèle de transit occasionnelle</li>
             </ul>
           </div>
         </CardContent>
@@ -374,7 +375,7 @@ const MarketStudy = () => {
                 </div>
                 <div className="p-3 bg-yellow-50 rounded">
                   <p className="font-medium text-yellow-800">Basse Saison (Octobre-Mai)</p>
-                  <p className="text-sm text-yellow-700">Clientèle locale fidélisée de 5 300 habitants</p>
+                  <p className="text-sm text-yellow-700">Clientèle locale fidélisée + tourisme intersaison (7 800 personnes)</p>
                 </div>
               </div>
             </div>

@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from "recharts";
 import { TrendingUp, Euro, Calculator, PiggyBank } from "lucide-react";
@@ -161,13 +160,14 @@ const FinancialProjections = () => {
           </div>
           
           <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-            <h4 className="font-semibold text-blue-800 mb-2">Analyse de Financement Optimisée</h4>
+            <h4 className="font-semibold text-blue-800 mb-2">Analyse de Financement Réaliste</h4>
             <ul className="text-sm text-blue-700 space-y-1">
-              <li>• Ratio d'endettement: 93% (avec nantissement immobilier solide)</li>
+              <li>• Ratio d'endettement: 93% (avec nantissement immobilier solide de 280 000€)</li>
               <li>• Garanties: 44% de la valeur empruntée (bien immobilier)</li>
-              <li>• Durée d'amortissement estimée: 15-20 ans (compatible avec la rentabilité)</li>
+              <li>• <strong>Durée d'amortissement optimisée: 5-8 ans</strong> (équipements de lavage automobile)</li>
               <li>• Taux d'intérêt estimé: 4.5-5.5% (conditions actuelles)</li>
-              <li>• Mensualité estimée: 3 500-4 200€/mois (compatible avec les bénéfices)</li>
+              <li>• <strong>Mensualité estimée: 9 500-12 800€/mois</strong> (compatible avec les bénéfices de 17 500€/mois)</li>
+              <li>• Capacité de remboursement excellente: ratio de 55-75%</li>
             </ul>
           </div>
         </CardContent>
