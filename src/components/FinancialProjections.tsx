@@ -1,22 +1,21 @@
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/cards";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from "recharts";
 import { TrendingUp, Euro, Calculator, PiggyBank } from "lucide-react";
 
 const FinancialProjections = () => {
   const monthlyRevenue = [
-    { month: "Jan", revenue: 8500, costs: 6200, profit: 2300 },
-    { month: "Fév", revenue: 9200, costs: 6400, profit: 2800 },
-    { month: "Mar", revenue: 12500, costs: 7100, profit: 5400 },
-    { month: "Avr", revenue: 15800, costs: 7800, profit: 8000 },
-    { month: "Mai", revenue: 22000, costs: 9200, profit: 12800 },
-    { month: "Jun", revenue: 35000, costs: 12500, profit: 22500 },
-    { month: "Jul", revenue: 48000, costs: 16800, profit: 31200 },
-    { month: "Aoû", revenue: 52000, costs: 18200, profit: 33800 },
-    { month: "Sep", revenue: 38000, costs: 13500, profit: 24500 },
-    { month: "Oct", revenue: 18500, costs: 8900, profit: 9600 },
-    { month: "Nov", revenue: 11200, costs: 7200, profit: 4000 },
-    { month: "Déc", revenue: 9800, costs: 6800, profit: 3000 }
+    { month: "Jan", revenue: 8500, costs: 5800, profit: 2700 },
+    { month: "Fév", revenue: 9200, costs: 6000, profit: 3200 },
+    { month: "Mar", revenue: 12500, costs: 6700, profit: 5800 },
+    { month: "Avr", revenue: 15800, costs: 7400, profit: 8400 },
+    { month: "Mai", revenue: 22000, costs: 8800, profit: 13200 },
+    { month: "Jun", revenue: 35000, costs: 12100, profit: 22900 },
+    { month: "Jul", revenue: 48000, costs: 16400, profit: 31600 },
+    { month: "Aoû", revenue: 52000, costs: 17800, profit: 34200 },
+    { month: "Sep", revenue: 38000, costs: 13100, profit: 24900 },
+    { month: "Oct", revenue: 18500, costs: 8500, profit: 10000 },
+    { month: "Nov", revenue: 11200, costs: 6800, profit: 4400 },
+    { month: "Déc", revenue: 9800, costs: 6400, profit: 3400 }
   ];
 
   const yearlyProjections = [
@@ -31,16 +30,16 @@ const FinancialProjections = () => {
     totalInvestment: 687435.60,
     personalContribution: 50000,
     propertyGuarantee: 280000,
-    loanNeeded: 357435.60
+    loanNeeded: 637435.60
   };
 
   const operatingCosts = [
     { category: "Électricité/Eau", monthly: 1800, annual: 21600 },
-    { category: "Maintenance équipements", monthly: 1200, annual: 14400 },
+    { category: "Maintenance équipements", monthly: 800, annual: 9600 },
     { category: "Assurances", monthly: 800, annual: 9600 },
-    { category: "Personnel (temps partiel)", monthly: 2500, annual: 30000 },
-    { category: "Marketing/Communication", monthly: 600, annual: 7200 },
-    { category: "Divers/Imprévus", monthly: 500, annual: 6000 }
+    { category: "Personnel (temps partiel)", monthly: 2200, annual: 26400 },
+    { category: "Marketing/Communication", monthly: 500, annual: 6000 },
+    { category: "Divers/Imprévus", monthly: 400, annual: 4800 }
   ];
 
   return (
@@ -76,11 +75,11 @@ const FinancialProjections = () => {
             </div>
             <div className="p-4 bg-red-50 rounded-lg text-center">
               <p className="text-sm text-red-600 mb-1">Coûts Annuels</p>
-              <p className="text-2xl font-bold text-red-800">120 600€</p>
+              <p className="text-2xl font-bold text-red-800">115 200€</p>
             </div>
             <div className="p-4 bg-blue-50 rounded-lg text-center">
               <p className="text-sm text-blue-600 mb-1">Bénéfice Net</p>
-              <p className="text-2xl font-bold text-blue-800">159 900€</p>
+              <p className="text-2xl font-bold text-blue-800">165 300€</p>
             </div>
           </div>
         </CardContent>
@@ -153,7 +152,7 @@ const FinancialProjections = () => {
                   <span className="font-bold text-green-600">{investmentDetails.personalContribution.toLocaleString()}€</span>
                 </div>
                 <div className="flex justify-between p-3 bg-green-50 rounded">
-                  <span>Garantie Immobilière</span>
+                  <span>Nantissement Immobilier</span>
                   <span className="font-bold text-green-600">{investmentDetails.propertyGuarantee.toLocaleString()}€</span>
                 </div>
               </div>
@@ -161,12 +160,13 @@ const FinancialProjections = () => {
           </div>
           
           <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-            <h4 className="font-semibold text-blue-800 mb-2">Analyse de Financement</h4>
+            <h4 className="font-semibold text-blue-800 mb-2">Analyse de Financement Optimisée</h4>
             <ul className="text-sm text-blue-700 space-y-1">
-              <li>• Ratio d'endettement: 52% (très acceptable)</li>
-              <li>• Garanties: 92% de la valeur empruntée</li>
-              <li>• Durée d'amortissement estimée: 7-10 ans</li>
+              <li>• Ratio d'endettement: 93% (avec nantissement immobilier solide)</li>
+              <li>• Garanties: 44% de la valeur empruntée (bien immobilier)</li>
+              <li>• Durée d'amortissement estimée: 12-15 ans</li>
               <li>• Taux d'intérêt estimé: 4-5% (conditions actuelles)</li>
+              <li>• Mensualité estimée: 4 200-4 800€/mois</li>
             </ul>
           </div>
         </CardContent>
@@ -177,7 +177,7 @@ const FinancialProjections = () => {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <PiggyBank className="h-5 w-5 text-purple-500" />
-            Coûts d'Exploitation Détaillés
+            Coûts d'Exploitation Optimisés
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -202,7 +202,7 @@ const FinancialProjections = () => {
             </div>
             <div className="p-4 bg-green-50 rounded-lg">
               <h4 className="font-semibold text-green-800 mb-2">Seuil de Rentabilité</h4>
-              <p className="text-2xl font-bold text-green-800">7 400€/mois</p>
+              <p className="text-2xl font-bold text-green-800">6 500€/mois</p>
               <p className="text-sm text-green-600">Atteint dès le mois 1</p>
             </div>
           </div>
