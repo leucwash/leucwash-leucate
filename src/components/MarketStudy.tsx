@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 import { TrendingUp, Target, MapPin, Calendar, Building2, ShoppingCart } from "lucide-react";
@@ -17,13 +18,13 @@ const MarketStudy = () => {
   ];
 
   const marketPotential = [
-    { segment: "Résidents permanents", value: 30, color: "#3B82F6" },
-    { segment: "Touristes été", value: 40, color: "#10B981" },
-    { segment: "Professionnels locaux", value: 20, color: "#F59E0B" },
-    { segment: "Passage D627", value: 10, color: "#EF4444" }
+    { segment: "Résidents permanents", value: 25, color: "#3B82F6" },
+    { segment: "Touristes été", value: 45, color: "#10B981" },
+    { segment: "Professionnels locaux", value: 25, color: "#F59E0B" },
+    { segment: "Passage D627", value: 5, color: "#EF4444" }
   ];
 
-  // Zone artisanale businesses - mise à jour
+  // Zone artisanale businesses - mise à jour complète
   const zoneArtisanaleBusinesses = [
     { category: "Services d'urgence", business: "Pompiers", icon: "🚒" },
     { category: "Glaçons", business: "Leucice - Fabrication de glaçons", icon: "🧊" },
@@ -133,7 +134,7 @@ const MarketStudy = () => {
                   <h5 className="font-medium text-fuchsia-700 mb-1">Synergies Commerciales Renforcées</h5>
                   <ul className="text-sm text-fuchsia-600 space-y-1">
                     <li>• Clientèle des 2 garages (Garage de l'Étang + IRAL Automobiles)</li>
-                    <li>• Employés des entreprises locales (Leucice, Voilerie, Sea Clone)</li>
+                    <li>• Employés des entreprises locales (Leucice, Voilerie, Sea Clone Boards)</li>
                     <li>• Clientèle de la Brasserie Artisanale de Leucate</li>
                     <li>• Sportifs nautiques (Location Windsurf, Sea Clone Boards)</li>
                     <li>• Personnel des services d'urgence</li>
@@ -226,12 +227,12 @@ const MarketStudy = () => {
             </div>
           </div>
           <div className="mt-4 p-4 bg-purple-50 rounded-lg">
-            <h4 className="font-semibold text-purple-800 mb-2">Justification de la Répartition</h4>
+            <h4 className="font-semibold text-purple-800 mb-2">Justification de la Répartition Affinée</h4>
             <ul className="text-sm text-purple-700 space-y-1">
-              <li>• <strong>Résidents (30%) :</strong> Base clientèle fidèle toute l'année</li>
-              <li>• <strong>Touristes (40%) :</strong> Pic saisonnier massive mais concentrée</li>
-              <li>• <strong>Professionnels (20%) :</strong> Écosystème local renforcé (2 garages, nautisme, services)</li>
-              <li>• <strong>Passage D627 (10%) :</strong> Clientèle de transit occasionnelle</li>
+              <li>• <strong>Résidents (25%) :</strong> Base clientèle fidèle toute l'année</li>
+              <li>• <strong>Touristes (45%) :</strong> Pic saisonnier massif avec pouvoir d'achat élevé</li>
+              <li>• <strong>Professionnels (25%) :</strong> Écosystème local renforcé (2 garages, nautisme, brasserie, services)</li>
+              <li>• <strong>Passage D627 (5%) :</strong> Clientèle de transit occasionnelle</li>
             </ul>
           </div>
         </CardContent>

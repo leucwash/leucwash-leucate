@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from "recharts";
 import { TrendingUp, Euro, Calculator, PiggyBank } from "lucide-react";
@@ -36,10 +37,10 @@ const FinancialProjections = () => {
   const operatingCosts = [
     { category: "Électricité/Eau", monthly: 1800, annual: 21600 },
     { category: "Maintenance équipements", monthly: 800, annual: 9600 },
-    { category: "Assurances", monthly: 800, annual: 9600 },
-    { category: "Personnel (temps partiel)", monthly: 2200, annual: 26400 },
-    { category: "Marketing/Communication", monthly: 500, annual: 6000 },
-    { category: "Divers/Imprévus", monthly: 400, annual: 4800 }
+    { category: "Assurances", monthly: 650, annual: 7800 },
+    { category: "Personnel (temps partiel)", monthly: 1800, annual: 21600 },
+    { category: "Marketing/Communication", monthly: 400, annual: 4800 },
+    { category: "Divers/Imprévus", monthly: 350, annual: 4200 }
   ];
 
   return (
@@ -75,11 +76,11 @@ const FinancialProjections = () => {
             </div>
             <div className="p-4 bg-red-50 rounded-lg text-center">
               <p className="text-sm text-red-600 mb-1">Coûts Annuels</p>
-              <p className="text-2xl font-bold text-red-800">115 200€</p>
+              <p className="text-2xl font-bold text-red-800">69 800€</p>
             </div>
             <div className="p-4 bg-blue-50 rounded-lg text-center">
               <p className="text-sm text-blue-600 mb-1">Bénéfice Net</p>
-              <p className="text-2xl font-bold text-blue-800">165 300€</p>
+              <p className="text-2xl font-bold text-blue-800">210 700€</p>
             </div>
           </div>
         </CardContent>
@@ -164,9 +165,9 @@ const FinancialProjections = () => {
             <ul className="text-sm text-blue-700 space-y-1">
               <li>• Ratio d'endettement: 93% (avec nantissement immobilier solide)</li>
               <li>• Garanties: 44% de la valeur empruntée (bien immobilier)</li>
-              <li>• Durée d'amortissement estimée: 12-15 ans</li>
-              <li>• Taux d'intérêt estimé: 4-5% (conditions actuelles)</li>
-              <li>• Mensualité estimée: 4 200-4 800€/mois</li>
+              <li>• Durée d'amortissement estimée: 15-20 ans (compatible avec la rentabilité)</li>
+              <li>• Taux d'intérêt estimé: 4.5-5.5% (conditions actuelles)</li>
+              <li>• Mensualité estimée: 3 500-4 200€/mois (compatible avec les bénéfices)</li>
             </ul>
           </div>
         </CardContent>
@@ -222,14 +223,14 @@ const FinancialProjections = () => {
             <div className="text-center">
               <div className="p-6 bg-cyan-50 rounded-lg">
                 <h4 className="font-semibold text-cyan-800 mb-2">Point Mort</h4>
-                <p className="text-3xl font-bold text-cyan-800">18 mois</p>
+                <p className="text-3xl font-bold text-cyan-800">12 mois</p>
                 <p className="text-sm text-cyan-600">Récupération investissement</p>
               </div>
             </div>
             <div className="text-center">
               <div className="p-6 bg-green-50 rounded-lg">
                 <h4 className="font-semibold text-green-800 mb-2">ROI Année 1</h4>
-                <p className="text-3xl font-bold text-green-800">23.2%</p>
+                <p className="text-3xl font-bold text-green-800">30.6%</p>
                 <p className="text-sm text-green-600">Excellent rendement</p>
               </div>
             </div>
@@ -246,8 +247,8 @@ const FinancialProjections = () => {
             <h4 className="font-semibold text-gray-800 mb-2">Conclusion Financière</h4>
             <p className="text-sm text-gray-700">
               Le projet Leucwash présente une rentabilité exceptionnelle avec un retour sur investissement 
-              rapide et une croissance soutenue. Les projections conservatrices montrent une viabilité 
-              économique forte, renforcée par la position stratégique unique et l'absence de concurrence directe.
+              rapide et une croissance soutenue. Les projections réalistes montrent une viabilité 
+              économique forte, renforcée par des coûts d'exploitation maîtrisés et la position stratégique unique.
             </p>
           </div>
         </CardContent>
