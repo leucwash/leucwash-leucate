@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
-import { TrendingUp, Target, MapPin, Calendar, Building2, ShoppingCart } from "lucide-react";
+import { TrendingUp, Target, MapPin, Calendar, Building2, ShoppingCart, Calculator } from "lucide-react";
 
 const MarketStudy = () => {
   const demographicData = [
