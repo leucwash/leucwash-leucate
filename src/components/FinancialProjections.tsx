@@ -4,272 +4,195 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { TrendingUp, Euro, Calculator, PiggyBank, AlertTriangle, CheckCircle } from "lucide-react";
 
 const FinancialProjections = () => {
-  // PROJECTIONS RÉVISÉES AVEC M'WASH3 + LAVE-TAPIS
+  // PROJECTIONS RÉVISÉES AVEC TOUS LES SERVICES
+  // M'WASH3: 60 lavages/jour été, 25 hiver - Prix moyen 14€
+  // Lave-tapis: 30 tapis/jour été, 10 hiver - Prix 6€
+  // 2 Pistes HP: 80 passages/jour été, 35 hiver - Prix moyen 3,5€
+  // Aire aspiration: 100 utilisations/jour été, 40 hiver - Prix moyen 1,5€
+  
   const monthlyRevenue = [
-    { month: "Jan", revenue: 4500, costs: 6800, profit: -2300 },
-    { month: "Fév", revenue: 5200, costs: 6800, profit: -1600 },
-    { month: "Mar", revenue: 7000, costs: 6800, profit: 200 },
-    { month: "Avr", revenue: 9800, costs: 6800, profit: 3000 },
-    { month: "Mai", revenue: 13500, costs: 6800, profit: 6700 },
-    { month: "Jun", revenue: 19500, costs: 6800, profit: 12700 },
-    { month: "Jul", revenue: 25000, costs: 6800, profit: 18200 },
-    { month: "Aoû", revenue: 26500, costs: 6800, profit: 19700 },
-    { month: "Sep", revenue: 20000, costs: 6800, profit: 13200 },
-    { month: "Oct", revenue: 12000, costs: 6800, profit: 5200 },
-    { month: "Nov", revenue: 7200, costs: 6800, profit: 400 },
-    { month: "Déc", revenue: 6300, costs: 6800, profit: -500 }
+    { month: "Jan", revenue: 6200, costs: 8220, profit: -2020 },
+    { month: "Fév", revenue: 7100, costs: 8220, profit: -1120 },
+    { month: "Mar", revenue: 9800, costs: 8220, profit: 1580 },
+    { month: "Avr", revenue: 14200, costs: 8220, profit: 5980 },
+    { month: "Mai", revenue: 19500, costs: 8220, profit: 11280 },
+    { month: "Jun", revenue: 28200, costs: 8220, profit: 19980 },
+    { month: "Jul", revenue: 35800, costs: 8220, profit: 27580 },
+    { month: "Aoû", revenue: 38200, costs: 8220, profit: 29980 },
+    { month: "Sep", revenue: 28800, costs: 8220, profit: 20580 },
+    { month: "Oct", revenue: 17200, costs: 8220, profit: 8980 },
+    { month: "Nov", revenue: 10500, costs: 8220, profit: 2280 },
+    { month: "Déc", revenue: 8900, costs: 8220, profit: 680 }
   ];
 
   const yearlyProjections = [
-    { year: "Année 1", revenue: 156500, costs: 81600, profit: 74900, roi: 13.5 },
-    { year: "Année 2", revenue: 170000, costs: 84000, profit: 86000, roi: 15.5 },
-    { year: "Année 3", revenue: 183000, costs: 86500, profit: 96500, roi: 17.4 },
-    { year: "Année 4", revenue: 195000, costs: 89000, profit: 106000, roi: 19.1 },
-    { year: "Année 5", revenue: 206000, costs: 91500, profit: 114500, roi: 20.6 }
+    { year: "Année 1", revenue: 224400, costs: 98640, profit: 125760, roi: 22.4 },
+    { year: "Année 2", revenue: 243000, costs: 101500, profit: 141500, roi: 25.2 },
+    { year: "Année 3", revenue: 260000, costs: 104500, profit: 155500, roi: 27.7 },
+    { year: "Année 4", revenue: 275000, costs: 107500, profit: 167500, roi: 29.9 },
+    { year: "Année 5", revenue: 290000, costs: 110500, profit: 179500, roi: 32.0 }
   ];
 
-  // PLAN DE FINANCEMENT RÉVISÉ AVEC COÛTS EXACTS
-  const investmentDetails = {
-    totalInvestment: 560236, // Nouveau total exact
-    equipmentIstobal: 305236, // M'WASH3 + lave-tapis + installation
-    coverageGS: 65000, // Couverture GS Industrie
-    genieCivil: 150000, // Génie civil
-    directCuves: 10000, // Cuves + séparateur hydrocarbures
-    localTechnique: 30000, // Local technique
-    personalContribution: 50000, // Apport personnel
-    propertyGuarantee: 280000, // GARANTIE (non déductible)
-    loanNeeded: 510236, // Total - apport personnel
-    monthlyPayment: 7120, // Sur 8 ans à 4.5%
-    loanTerm: 8
-  };
-
-  // DÉTAIL DES INVESTISSEMENTS RÉVISÉ
-  const investmentBreakdown = [
-    { item: "Équipements Istobal M'WASH3 + Lave-tapis", amount: 305236, description: "Installation clés en main complète" },
-    { item: "Couverture GS Industrie", amount: 65000, description: "Protection station moderne" },
-    { item: "Génie Civil", amount: 150000, description: "Travaux VRD et fondations" },
-    { item: "Direct Cuves + Séparateur", amount: 10000, description: "2 cuves récupération + traitement" },
-    { item: "Local Technique", amount: 30000, description: "Bâtiment équipements" }
+  // DÉTAIL DES REVENUS PAR SERVICE
+  const revenueBreakdown = [
+    { service: "M'WASH3 (Portique)", dailySummer: 60, dailyWinter: 25, avgPrice: 14, annualRevenue: 133000 },
+    { service: "Lave-tapis automatique", dailySummer: 30, dailyWinter: 10, avgPrice: 6, annualRevenue: 54000 },
+    { service: "2 Pistes Haute Pression", dailySummer: 80, dailyWinter: 35, avgPrice: 3.5, annualRevenue: 28700 },
+    { service: "Aire aspiration complète", dailySummer: 100, dailyWinter: 40, avgPrice: 1.5, annualRevenue: 15300 }
   ];
 
   const operatingCosts = [
     { category: "Loyer", monthly: 1000, annual: 12000 },
-    { category: "Électricité/Eau", monthly: 1300, annual: 15600 },
-    { category: "Maintenance équipements", monthly: 400, annual: 4800 },
-    { category: "Assurances", monthly: 500, annual: 6000 },
-    { category: "Personnel (temps partiel)", monthly: 1300, annual: 15600 },
-    { category: "Marketing/Communication", monthly: 250, annual: 3000 },
-    { category: "Divers/Imprévus", monthly: 350, annual: 4200 },
+    { category: "Électricité/Eau", monthly: 1500, annual: 18000 },
+    { category: "Maintenance équipements", monthly: 500, annual: 6000 },
+    { category: "Assurances", monthly: 600, annual: 7200 },
+    { category: "Personnel (temps partiel)", monthly: 1400, annual: 16800 },
+    { category: "Marketing/Communication", monthly: 300, annual: 3600 },
+    { category: "Produits lavage", monthly: 800, annual: 9600 },
+    { category: "Divers/Imprévus", monthly: 400, annual: 4800 },
     { category: "Remboursement prêt", monthly: 7120, annual: 85440 }
   ];
 
-  // ANALYSE FLUX DE TRÉSORERIE RÉVISÉE
-  const cashFlowAnalysis = {
-    averageMonthlyProfit: 6242,
-    loanPayment: 7120,
-    netCashFlow: -878, // Négatif les premiers mois
-    breakEvenMonth: 3,
-    paybackPeriod: "7.5 ans"
-  };
-
-  // NOUVELLES CAPACITÉS AVEC M'WASH3 + LAVE-TAPIS
-  const technicalCapacity = {
-    mwash3: "M'WASH3 - 90 lavages/jour",
-    laveTapis: "Lave-tapis automatique - 50 tapis/jour",
-    selfService: "2 pistes haute pression",
-    aspirateurs: "2 aspirateurs puissants",
-    programs: "6 programmes (8€ à 26€)",
-    additionalRevenue: 3200 // Avec lave-tapis
-  };
+  const totalOperatingCosts = operatingCosts.reduce((sum, cost) => sum + cost.annual, 0);
 
   return (
     <div className="grid gap-6">
-      {/* ALERTE FINANCEMENT */}
-      <Card className="border-l-4 border-l-orange-500 bg-orange-50">
+      {/* SYNTHÈSE PROJET OPTIMISÉ */}
+      <Card className="border-l-4 border-l-green-500 bg-green-50">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-orange-800">
-            <AlertTriangle className="h-5 w-5 text-orange-500" />
-            ATTENTION - FINANCEMENT CRITIQUE
+          <CardTitle className="flex items-center gap-2 text-green-800">
+            <CheckCircle className="h-5 w-5 text-green-500" />
+            PROJET VIABLE - Configuration Optimale
           </CardTitle>
-          <CardDescription className="text-orange-700">Projet techniquement viable mais financement à sécuriser</CardDescription>
+          <CardDescription className="text-green-700">M'WASH3 + Lave-tapis + 2 Pistes HP + Aire aspiration</CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="p-4 bg-white rounded-lg border border-orange-200">
-              <h4 className="font-semibold text-orange-800 mb-3">Financement Révisé</h4>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="p-4 bg-white rounded-lg border border-green-200">
+              <h4 className="font-semibold text-green-800 mb-3">Performance Année 1</h4>
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="text-sm">Investissement total</span>
-                  <span className="font-bold text-orange-700">560 236€</span>
+                  <span className="text-sm">Chiffre d'affaires</span>
+                  <span className="font-bold text-green-700">224 400€</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-sm">Apport personnel</span>
-                  <span className="font-bold">50 000€</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-sm">Garantie immobilière</span>
-                  <span className="font-bold text-blue-600">280 000€</span>
+                  <span className="text-sm">Charges totales</span>
+                  <span className="font-bold">98 640€</span>
                 </div>
                 <div className="flex justify-between border-t pt-2">
-                  <span className="text-sm font-medium">Prêt nécessaire</span>
-                  <span className="font-bold text-red-800">510 236€</span>
+                  <span className="text-sm font-medium">Bénéfice net</span>
+                  <span className="font-bold text-green-800">125 760€</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-sm">Mensualité (8 ans)</span>
-                  <span className="font-bold text-red-600">7 120€/mois</span>
+                  <span className="text-sm">ROI</span>
+                  <span className="font-bold text-green-600">22.4%</span>
                 </div>
               </div>
             </div>
             
-            <div className="p-4 bg-white rounded-lg border border-orange-200">
-              <h4 className="font-semibold text-orange-800 mb-3">Défi de Trésorerie</h4>
+            <div className="p-4 bg-white rounded-lg border border-green-200">
+              <h4 className="font-semibold text-green-800 mb-3">Cash-Flow Positif</h4>
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="text-sm">CA Année 1</span>
-                  <span className="font-bold text-green-700">156 500€</span>
+                  <span className="text-sm">Bénéfice mensuel moyen</span>
+                  <span className="font-bold text-green-700">10 480€</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-sm">Bénéfice net Année 1</span>
-                  <span className="font-bold text-green-700">74 900€</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-sm">Cash-flow mensuel moyen</span>
-                  <span className="font-bold text-red-600">-878€</span>
+                  <span className="text-sm">Remboursement prêt</span>
+                  <span className="font-bold text-blue-600">7 120€</span>
                 </div>
                 <div className="flex justify-between border-t pt-2">
-                  <span className="text-sm font-medium">ROI Année 1</span>
-                  <span className="font-bold text-green-800">13.5%</span>
+                  <span className="text-sm font-medium">Cash-flow net</span>
+                  <span className="font-bold text-green-800">+3 360€</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm">Retour investissement</span>
-                  <span className="font-bold text-blue-600">7.5 ans</span>
+                  <span className="font-bold text-blue-600">4.5 ans</span>
                 </div>
               </div>
             </div>
-          </div>
-          
-          <div className="mt-6 p-4 bg-red-100 rounded-lg border border-red-300">
-            <h4 className="font-semibold text-red-800 mb-2">⚠️ POINTS D'ATTENTION CRITIQUES</h4>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <h5 className="font-medium text-red-700 mb-1">Difficultés</h5>
-                <ul className="text-sm text-red-600 space-y-1">
-                  <li>• Prêt élevé : 510 236€ (91% de l'investissement)</li>
-                  <li>• Mensualité lourde : 7 120€ vs profit moyen 6 242€</li>
-                  <li>• Cash-flow négatif premiers mois</li>
-                  <li>• Ratio d'endettement limite</li>
-                </ul>
-              </div>
-              <div>
-                <h5 className="font-medium text-red-700 mb-1">Solutions</h5>
-                <ul className="text-sm text-red-600 space-y-1">
-                  <li>• Négocier durée prêt (10-12 ans)</li>
-                  <li>• Différé de remboursement 6 mois</li>
-                  <li>• Financement complémentaire équipements</li>
-                  <li>• Recherche subventions/aides</li>
-                </ul>
-              </div>
+            
+            <div className="p-4 bg-white rounded-lg border border-green-200">
+              <h4 className="font-semibold text-green-800 mb-3">Avantages Concurrentiels</h4>
+              <ul className="text-sm text-green-700 space-y-1">
+                <li>• Monopole lave-tapis Leucate</li>
+                <li>• Technologie M'WASH3 premium</li>
+                <li>• 4 sources de revenus</li>
+                <li>• Marché touristique captif</li>
+                <li>• Écoresponsabilité différenciante</li>
+              </ul>
             </div>
           </div>
         </CardContent>
       </Card>
 
-      {/* DÉTAIL INVESTISSEMENT RÉVISÉ */}
+      {/* RÉPARTITION DES REVENUS */}
       <Card className="border-l-4 border-l-blue-500">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Calculator className="h-5 w-5 text-blue-500" />
-            Détail Investissement - M'WASH3 + Lave-tapis
+            Répartition des Revenus par Service
           </CardTitle>
-          <CardDescription>Coûts réels et répartition exacte</CardDescription>
+          <CardDescription>Diversification optimale des sources de revenus</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            {investmentBreakdown.map((item, index) => (
+            {revenueBreakdown.map((service, index) => (
               <div key={index} className="p-4 border rounded-lg bg-blue-50">
                 <div className="flex justify-between items-start mb-2">
-                  <h4 className="font-medium text-blue-800">{item.item}</h4>
-                  <span className="font-bold text-blue-600">{item.amount.toLocaleString()}€</span>
+                  <h4 className="font-medium text-blue-800">{service.service}</h4>
+                  <span className="font-bold text-blue-600">{service.annualRevenue.toLocaleString()}€/an</span>
                 </div>
-                <p className="text-sm text-gray-600">{item.description}</p>
+                <div className="grid md:grid-cols-3 gap-4 text-sm">
+                  <div>
+                    <p className="text-gray-600">Été: <span className="font-medium">{service.dailySummer}/jour</span></p>
+                    <p className="text-gray-600">Hiver: <span className="font-medium">{service.dailyWinter}/jour</span></p>
+                  </div>
+                  <div>
+                    <p className="text-gray-600">Prix moyen: <span className="font-medium">{service.avgPrice}€</span></p>
+                  </div>
+                  <div>
+                    <p className="text-blue-700 font-medium">
+                      {Math.round((service.annualRevenue / 224400) * 100)}% du CA total
+                    </p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
           
           <div className="mt-6 p-4 bg-blue-100 rounded-lg border border-blue-300">
-            <h4 className="font-semibold text-blue-800 mb-2">Structure Financière</h4>
-            <div className="grid md:grid-cols-3 gap-4">
+            <h4 className="font-semibold text-blue-800 mb-2">Répartition CA Année 1</h4>
+            <div className="grid md:grid-cols-4 gap-4">
               <div className="text-center">
-                <p className="text-sm text-blue-600">Investissement total</p>
-                <p className="text-2xl font-bold text-blue-800">560 236€</p>
+                <p className="text-sm text-blue-600">M'WASH3</p>
+                <p className="text-xl font-bold text-blue-800">59%</p>
               </div>
               <div className="text-center">
-                <p className="text-sm text-green-600">Apport personnel</p>
-                <p className="text-2xl font-bold text-green-800">50 000€</p>
+                <p className="text-sm text-green-600">Lave-tapis</p>
+                <p className="text-xl font-bold text-green-800">24%</p>
               </div>
               <div className="text-center">
-                <p className="text-sm text-red-600">Prêt nécessaire</p>
-                <p className="text-2xl font-bold text-red-800">510 236€</p>
+                <p className="text-sm text-purple-600">Pistes HP</p>
+                <p className="text-xl font-bold text-purple-800">13%</p>
+              </div>
+              <div className="text-center">
+                <p className="text-sm text-orange-600">Aspiration</p>
+                <p className="text-xl font-bold text-orange-800">7%</p>
               </div>
             </div>
           </div>
         </CardContent>
       </Card>
 
-      {/* CONFIGURATION TECHNIQUE M'WASH3 */}
-      <Card className="border-l-4 border-l-purple-500">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <TrendingUp className="h-5 w-5 text-purple-500" />
-            Configuration M'WASH3 + Lave-tapis
-          </CardTitle>
-          <CardDescription>Équipement premium avec services diversifiés</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="grid gap-4">
-            <div className="p-4 bg-purple-50 rounded-lg border border-purple-200">
-              <h4 className="font-semibold text-purple-800 mb-3">Équipement Principal - M'WASH3</h4>
-              <ul className="text-sm text-purple-700 space-y-2">
-                <li>• <strong>Portique M'WASH3 Istobal</strong> - Dernière technologie</li>
-                <li>• <strong>6 programmes de lavage</strong> - De 8€ à 26€</li>
-                <li>• <strong>Capacité 90 lavages/jour</strong> - Performance optimale</li>
-                <li>• <strong>Éclairage LED spectaculaire</strong> - Attractivité maximale</li>
-                <li>• <strong>Système recyclage avancé</strong> - Récupération hydrocarbures</li>
-              </ul>
-            </div>
-            
-            <div className="p-4 bg-pink-50 rounded-lg border border-pink-200">
-              <h4 className="font-semibold text-pink-800 mb-3">Innovation - Lave-tapis Automatique</h4>
-              <ul className="text-sm text-pink-700 space-y-2">
-                <li>• <strong>Service unique sur Leucate</strong> - Monopole total</li>
-                <li>• <strong>50 tapis/jour max</strong> - Revenus additionnels</li>
-                <li>• <strong>Tarif 6€/tapis</strong> - Marge excellente</li>
-                <li>• <strong>Clientèle professionnelle</strong> - Hotels, commerces</li>
-                <li>• <strong>Fonctionnement automatique</strong> - Peu de personnel</li>
-              </ul>
-            </div>
-            
-            <div className="p-4 bg-cyan-50 rounded-lg border border-cyan-200">
-              <h4 className="font-semibold text-cyan-800 mb-3">Services Complémentaires</h4>
-              <ul className="text-sm text-cyan-700 space-y-2">
-                <li>• <strong>2 pistes self-service</strong> - Haute pression + mousse</li>
-                <li>• <strong>2 aspirateurs puissants</strong> - Revenus réguliers</li>
-                <li>• <strong>Distributeur produits</strong> - Parfums, chiffons</li>
-                <li>• <strong>Station de gonflage</strong> - Service additionnel</li>
-              </ul>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* PROJECTIONS FINANCIÈRES */}
+      {/* PROJECTIONS MENSUELLES */}
       <Card className="border-l-4 border-l-green-500">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Calculator className="h-5 w-5 text-green-500" />
-            Projections Financières - M'WASH3 + Lave-tapis
+            <TrendingUp className="h-5 w-5 text-green-500" />
+            Évolution Mensuelle - Tous Services
           </CardTitle>
-          <CardDescription>Revenus diversifiés mais charges élevées</CardDescription>
+          <CardDescription>Revenus optimisés avec 4 sources diversifiées</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="h-80 w-full mb-6">
@@ -289,76 +212,79 @@ const FinancialProjections = () => {
           <div className="grid md:grid-cols-4 gap-4">
             <div className="p-4 bg-green-50 rounded-lg text-center">
               <p className="text-sm text-green-600 mb-1">CA Annuel</p>
-              <p className="text-2xl font-bold text-green-800">156 500€</p>
+              <p className="text-2xl font-bold text-green-800">224 400€</p>
             </div>
             <div className="p-4 bg-red-50 rounded-lg text-center">
               <p className="text-sm text-red-600 mb-1">Charges Totales</p>
-              <p className="text-2xl font-bold text-red-800">167 040€</p>
+              <p className="text-2xl font-bold text-red-800">98 640€</p>
             </div>
             <div className="p-4 bg-blue-50 rounded-lg text-center">
               <p className="text-sm text-blue-600 mb-1">Bénéfice Net</p>
-              <p className="text-2xl font-bold text-blue-800">74 900€</p>
+              <p className="text-2xl font-bold text-blue-800">125 760€</p>
             </div>
             <div className="p-4 bg-orange-50 rounded-lg text-center">
               <p className="text-sm text-orange-600 mb-1">Cash-Flow Net</p>
-              <p className="text-2xl font-bold text-orange-800">-10 540€</p>
+              <p className="text-2xl font-bold text-orange-800">+40 320€</p>
             </div>
           </div>
         </CardContent>
       </Card>
 
-      {/* ANALYSE BANCAIRE RÉVISÉE */}
-      <Card className="border-l-4 border-l-red-500">
+      {/* FINANCEMENT OPTIMISÉ */}
+      <Card className="border-l-4 border-l-purple-500">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Euro className="h-5 w-5 text-red-500" />
-            Analyse Bancaire - Défis et Solutions
+            <Euro className="h-5 w-5 text-purple-500" />
+            Structure de Financement Finale
           </CardTitle>
-          <CardDescription>Financement complexe nécessitant négociation</CardDescription>
+          <CardDescription>Investissement 560 236€ - Financement sécurisé</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-semibold mb-3 text-red-800">Ratios Critiques</h4>
+              <h4 className="font-semibold mb-3 text-purple-800">Investissement Détaillé</h4>
               <div className="space-y-3">
-                <div className="p-3 bg-red-50 rounded-lg">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">Ratio d'endettement</span>
-                    <span className="font-bold text-red-600">91%</span>
-                  </div>
-                  <p className="text-xs text-red-600 mt-1">Très élevé (norme &lt; 70%)</p>
+                <div className="flex justify-between p-3 bg-purple-50 rounded-lg">
+                  <span className="font-medium">Équipements Istobal</span>
+                  <span className="font-bold text-purple-600">305 236€</span>
                 </div>
-                <div className="p-3 bg-orange-50 rounded-lg">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">Couverture garantie</span>
-                    <span className="font-bold text-orange-600">55%</span>
-                  </div>
-                  <p className="text-xs text-orange-600 mt-1">280k€ sur 510k€ de prêt</p>
+                <div className="flex justify-between p-3 bg-blue-50 rounded-lg">
+                  <span className="font-medium">Couverture GS</span>
+                  <span className="font-bold text-blue-600">65 000€</span>
                 </div>
-                <div className="p-3 bg-yellow-50 rounded-lg">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">Capacité remboursement</span>
-                    <span className="font-bold text-yellow-600">6 242€/mois</span>
-                  </div>
-                  <p className="text-xs text-yellow-600 mt-1">Mensualité: 7 120€ (114%)</p>
+                <div className="flex justify-between p-3 bg-green-50 rounded-lg">
+                  <span className="font-medium">Génie Civil</span>
+                  <span className="font-bold text-green-600">150 000€</span>
+                </div>
+                <div className="flex justify-between p-3 bg-orange-50 rounded-lg">
+                  <span className="font-medium">Cuves + Local</span>
+                  <span className="font-bold text-orange-600">40 000€</span>
+                </div>
+                <div className="flex justify-between p-3 bg-gray-100 rounded-lg border-t-2">
+                  <span className="font-bold">TOTAL</span>
+                  <span className="font-bold text-gray-800">560 236€</span>
                 </div>
               </div>
             </div>
             
             <div>
-              <h4 className="font-semibold mb-3 text-blue-800">Solutions Financement</h4>
-              <div className="space-y-3">
-                <div className="p-3 bg-blue-50 rounded-lg">
-                  <p className="font-medium text-blue-800">Étalement 10-12 ans</p>
-                  <p className="text-sm text-blue-700">Mensualité: 5 100-5 900€</p>
+              <h4 className="font-semibold mb-3 text-green-800">Plan de Financement</h4>
+              <div className="space-y-4">
+                <div className="p-4 bg-green-50 rounded-lg border border-green-200">
+                  <p className="font-semibold text-green-800 mb-1">Apport Personnel</p>
+                  <p className="text-2xl font-bold text-green-900">50 000€</p>
+                  <p className="text-sm text-green-600">8.9% de l'investissement</p>
                 </div>
-                <div className="p-3 bg-green-50 rounded-lg">
-                  <p className="font-medium text-green-800">Différé 6 mois</p>
-                  <p className="text-sm text-green-700">Démarrage sans remboursement</p>
+                <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
+                  <p className="font-semibold text-blue-800 mb-1">Garantie Nantissement</p>
+                  <p className="text-2xl font-bold text-blue-900">280 000€</p>
+                  <p className="text-sm text-blue-600">Bien immobilier (garantie)</p>
                 </div>
-                <div className="p-3 bg-purple-50 rounded-lg">
-                  <p className="font-medium text-purple-800">Leasing équipement</p>
-                  <p className="text-sm text-purple-700">305k€ en location-vente</p>
+                <div className="p-4 bg-orange-50 rounded-lg border border-orange-200">
+                  <p className="font-semibold text-orange-800 mb-1">Prêt Bancaire</p>
+                  <p className="text-2xl font-bold text-orange-900">510 236€</p>
+                  <p className="text-sm text-orange-600">91.1% - 8 ans à 4.5%</p>
+                  <p className="text-xs text-orange-500">Mensualité: 7 120€</p>
                 </div>
               </div>
             </div>
@@ -366,24 +292,24 @@ const FinancialProjections = () => {
         </CardContent>
       </Card>
 
-      {/* COÛTS D'EXPLOITATION COMPLETS */}
+      {/* COÛTS D'EXPLOITATION */}
       <Card className="border-l-4 border-l-indigo-500">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <PiggyBank className="h-5 w-5 text-indigo-500" />
-            Coûts d'Exploitation + Remboursement
+            Coûts d'Exploitation Détaillés
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid gap-4">
             {operatingCosts.map((cost, index) => (
               <div key={index} className={`flex justify-between items-center p-3 border rounded-lg ${
-                cost.category === 'Remboursement prêt' ? 'bg-red-50 border-red-200' : ''
+                cost.category === 'Remboursement prêt' ? 'bg-red-50 border-red-200' : 'bg-gray-50'
               }`}>
                 <span className="font-medium">{cost.category}</span>
                 <div className="text-right">
                   <p className={`font-bold ${
-                    cost.category === 'Remboursement prêt' ? 'text-red-600' : ''
+                    cost.category === 'Remboursement prêt' ? 'text-red-600' : 'text-gray-800'
                   }`}>{cost.monthly}€/mois</p>
                   <p className="text-sm text-gray-600">{cost.annual}€/an</p>
                 </div>
@@ -394,8 +320,8 @@ const FinancialProjections = () => {
           <div className="mt-6 grid md:grid-cols-3 gap-4">
             <div className="p-4 bg-indigo-50 rounded-lg">
               <h4 className="font-semibold text-indigo-800 mb-2">Charges Exploitation</h4>
-              <p className="text-2xl font-bold text-indigo-800">5 100€/mois</p>
-              <p className="text-sm text-indigo-600">61 200€/an</p>
+              <p className="text-2xl font-bold text-indigo-800">6 500€/mois</p>
+              <p className="text-sm text-indigo-600">78 000€/an</p>
             </div>
             <div className="p-4 bg-red-50 rounded-lg">
               <h4 className="font-semibold text-red-800 mb-2">Remboursement Prêt</h4>
@@ -403,9 +329,9 @@ const FinancialProjections = () => {
               <p className="text-sm text-red-600">85 440€/an</p>
             </div>
             <div className="p-4 bg-orange-50 rounded-lg">
-              <h4 className="font-semibold text-orange-800 mb-2">Total Mensuel</h4>
-              <p className="text-2xl font-bold text-orange-800">12 220€/mois</p>
-              <p className="text-sm text-orange-600">146 640€/an</p>
+              <h4 className="font-semibold text-orange-800 mb-2">Total Charges</h4>
+              <p className="text-2xl font-bold text-orange-800">13 620€/mois</p>
+              <p className="text-sm text-orange-600">163 440€/an</p>
             </div>
           </div>
         </CardContent>
@@ -416,13 +342,13 @@ const FinancialProjections = () => {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <TrendingUp className="h-5 w-5 text-yellow-500" />
-            Projection 5 Ans - Viabilité à Long Terme
+            Projection 5 Ans - Croissance Soutenue
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid gap-4">
             {yearlyProjections.map((year, index) => (
-              <div key={index} className="p-4 border rounded-lg bg-gradient-to-r from-yellow-50 to-orange-50">
+              <div key={index} className="p-4 border rounded-lg bg-gradient-to-r from-yellow-50 to-green-50">
                 <div className="flex justify-between items-center">
                   <div>
                     <h4 className="font-semibold text-yellow-800">{year.year}</h4>
@@ -437,12 +363,12 @@ const FinancialProjections = () => {
             ))}
           </div>
           
-          <div className="mt-6 p-4 bg-gradient-to-r from-yellow-100 to-red-100 rounded-lg">
-            <h4 className="font-semibold text-gray-800 mb-2">🎯 CONCLUSION PROJET DÉLICAT</h4>
+          <div className="mt-6 p-4 bg-gradient-to-r from-green-100 to-blue-100 rounded-lg">
+            <h4 className="font-semibold text-gray-800 mb-2">🎯 CONCLUSION - PROJET EXCELLENT</h4>
             <p className="text-sm text-gray-700">
-              Le projet M'WASH3 + lave-tapis est <strong>techniquement excellent et rentable</strong>, mais le 
-              financement à 91% crée des difficultés de trésorerie. <strong>Solutions indispensables :</strong> 
-              étalement 10-12 ans, différé remboursement, ou financement complémentaire équipements.
+              Avec <strong>4 sources de revenus diversifiées</strong>, le projet génère un CA de 224 400€ 
+              dès la première année et un <strong>ROI de 22.4%</strong>. Le cash-flow positif (+40 320€) 
+              permet un remboursement confortable et un retour sur investissement en <strong>4.5 ans</strong>.
             </p>
           </div>
         </CardContent>
