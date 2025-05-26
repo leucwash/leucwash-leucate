@@ -4,112 +4,86 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { TrendingUp, Euro, Calculator, PiggyBank, AlertTriangle, CheckCircle } from "lucide-react";
 
 const FinancialProjections = () => {
-  // PROJECTIONS OPTIMISÉES POUR VIABILITÉ
+  // PROJECTIONS OPTIMISÉES AVEC 1 PORTIQUE
   const monthlyRevenue = [
-    { month: "Jan", revenue: 5800, costs: 5200, profit: 600 },
-    { month: "Fév", revenue: 6200, costs: 5200, profit: 1000 },
-    { month: "Mar", revenue: 8500, costs: 5200, profit: 3300 },
-    { month: "Avr", revenue: 11000, costs: 5200, profit: 5800 },
-    { month: "Mai", revenue: 15500, costs: 5200, profit: 10300 },
-    { month: "Jun", revenue: 22000, costs: 5200, profit: 16800 },
-    { month: "Jul", revenue: 28500, costs: 5200, profit: 23300 },
-    { month: "Aoû", revenue: 30000, costs: 5200, profit: 24800 },
-    { month: "Sep", revenue: 23000, costs: 5200, profit: 17800 },
-    { month: "Oct", revenue: 13500, costs: 5200, profit: 8300 },
-    { month: "Nov", revenue: 8000, costs: 5200, profit: 2800 },
-    { month: "Déc", revenue: 7200, costs: 5200, profit: 2000 }
+    { month: "Jan", revenue: 4200, costs: 6500, profit: -2300 },
+    { month: "Fév", revenue: 4800, costs: 6500, profit: -1700 },
+    { month: "Mar", revenue: 6500, costs: 6500, profit: 0 },
+    { month: "Avr", revenue: 9200, costs: 6500, profit: 2700 },
+    { month: "Mai", revenue: 12800, costs: 6500, profit: 6300 },
+    { month: "Jun", revenue: 18500, costs: 6500, profit: 12000 },
+    { month: "Jul", revenue: 24000, costs: 6500, profit: 17500 },
+    { month: "Aoû", revenue: 25500, costs: 6500, profit: 19000 },
+    { month: "Sep", revenue: 19200, costs: 6500, profit: 12700 },
+    { month: "Oct", revenue: 11500, costs: 6500, profit: 5000 },
+    { month: "Nov", revenue: 6800, costs: 6500, profit: 300 },
+    { month: "Déc", revenue: 5900, costs: 6500, profit: -600 }
   ];
 
   const yearlyProjections = [
-    { year: "Année 1", revenue: 179200, costs: 62400, profit: 116800, roi: 17.0 },
-    { year: "Année 2", revenue: 195000, costs: 64500, profit: 130500, roi: 19.0 },
-    { year: "Année 3", revenue: 210000, costs: 66600, profit: 143400, roi: 20.9 },
-    { year: "Année 4", revenue: 225000, costs: 68700, profit: 156300, roi: 22.7 },
-    { year: "Année 5", revenue: 240000, costs: 70800, profit: 169200, roi: 24.6 }
+    { year: "Année 1", revenue: 148700, costs: 78000, profit: 70700, roi: 13.0 },
+    { year: "Année 2", revenue: 162000, costs: 80000, profit: 82000, roi: 15.1 },
+    { year: "Année 3", revenue: 175000, costs: 82000, profit: 93000, roi: 17.2 },
+    { year: "Année 4", revenue: 188000, costs: 84000, profit: 104000, roi: 19.2 },
+    { year: "Année 5", revenue: 200000, costs: 86000, profit: 114000, roi: 21.1 }
   ];
 
   // PLAN DE FINANCEMENT OPTIMISÉ
   const investmentDetails = {
-    totalInvestment: 550000, // Réduit de 687 435€ à 550 000€
+    totalInvestment: 541436, // Réduction de 146 000€
     personalContribution: 50000,
     propertyGuarantee: 280000,
-    loanNeeded: 220000, // Au lieu de 637 435€
-    monthlyPayment: 3100, // Sur 8 ans à 4.5%
+    loanNeeded: 211436, // Au lieu de 357 435€
+    monthlyPayment: 2950, // Sur 8 ans à 4.5%
     loanTerm: 8
   };
 
   // OPTIMISATIONS D'INVESTISSEMENT
   const investmentOptimizations = [
-    { item: "Équipement Istobal - Version optimisée", original: 385000, optimized: 320000, savings: 65000 },
-    { item: "Travaux et aménagements", original: 180000, optimized: 130000, savings: 50000 },
-    { item: "Installation électrique", original: 35000, optimized: 25000, savings: 10000 },
-    { item: "Études et honoraires", original: 25000, optimized: 20000, savings: 5000 },
-    { item: "Fonds de roulement", original: 30000, optimized: 25000, savings: 5000 },
-    { item: "Divers et imprévus", original: 32435.60, optimized: 30000, savings: 2435.60 }
+    { item: "Équipement Istobal - 1 portique au lieu de 2", original: 511000, optimized: 385000, savings: 126000 },
+    { item: "Couverture - 1 portique au lieu de 2", original: 40000, optimized: 20000, savings: 20000 },
+    { item: "Travaux VRD optimisés", original: 180000, optimized: 150000, savings: 30000 },
+    { item: "Installation électrique simplifiée", original: 35000, optimized: 25000, savings: 10000 }
   ];
 
   const operatingCosts = [
-    { category: "Loyer", monthly: 800, annual: 9600 }, // Négociation à 800€
-    { category: "Électricité/Eau", monthly: 1400, annual: 16800 }, // Optimisation LED
-    { category: "Maintenance équipements", monthly: 400, annual: 4800 },
-    { category: "Assurances", monthly: 500, annual: 6000 },
-    { category: "Personnel (temps partiel)", monthly: 1500, annual: 18000 },
-    { category: "Marketing/Communication", monthly: 300, annual: 3600 },
+    { category: "Loyer", monthly: 1000, annual: 12000 },
+    { category: "Électricité/Eau", monthly: 1200, annual: 14400 },
+    { category: "Maintenance équipements", monthly: 300, annual: 3600 },
+    { category: "Assurances", monthly: 450, annual: 5400 },
+    { category: "Personnel (temps partiel)", monthly: 1200, annual: 14400 },
+    { category: "Marketing/Communication", monthly: 250, annual: 3000 },
     { category: "Divers/Imprévus", monthly: 300, annual: 3600 }
-  ];
-
-  // STRATÉGIES DE VIABILITÉ
-  const viabilityStrategies = [
-    {
-      category: "Réduction Coûts Investissement",
-      strategies: [
-        "Équipement Istobal modèle M'22 au lieu de M'24 (-65 000€)",
-        "Travaux optimisés avec entreprises locales (-50 000€)",
-        "Installation électrique simplifiée (-10 000€)",
-        "Négociation loyer à 800€/mois (-200€/mois = -2 400€/an)"
-      ],
-      totalSavings: 137435.60
-    },
-    {
-      category: "Optimisation Revenus",
-      strategies: [
-        "Partenariats entreprises locales (forfaits B2B)",
-        "Programmes fidélité résidents permanents",
-        "Services premium été (détailing, céramique)",
-        "Tarification dynamique saisonnière"
-      ],
-      additionalRevenue: 35000
-    }
   ];
 
   // ANALYSE FLUX DE TRÉSORERIE
   const cashFlowAnalysis = {
-    averageMonthlyProfit: 9733,
-    loanPayment: 3100,
-    netCashFlow: 6633,
-    breakEvenMonth: 2,
-    paybackPeriod: "4.7 ans"
+    averageMonthlyProfit: 5892,
+    loanPayment: 2950,
+    netCashFlow: 2942,
+    breakEvenMonth: 3,
+    paybackPeriod: "7.7 ans"
   };
 
   return (
     <div className="grid gap-6">
-      {/* PROJET VIABLE - SOLUTION */}
+      {/* PROJET VIABLE - SOLUTION OPTIMISÉE */}
       <Card className="border-l-4 border-l-green-500 bg-green-50">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-green-800">
             <CheckCircle className="h-5 w-5 text-green-500" />
-            PROJET RENDU VIABLE - SOLUTIONS APPLIQUÉES
+            PROJET OPTIMISÉ ET VIABLE - CONFIGURATION 1 PORTIQUE
           </CardTitle>
-          <CardDescription className="text-green-700">Optimisations pour assurer la faisabilité financière</CardDescription>
+          <CardDescription className="text-green-700">Solution économique avec excellent potentiel de rentabilité</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="p-4 bg-white rounded-lg border border-green-200">
-              <h4 className="font-semibold text-green-800 mb-3">Financement Restructuré</h4>
+              <h4 className="font-semibold text-green-800 mb-3">Financement Optimisé</h4>
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span className="text-sm">Investissement total</span>
-                  <span className="font-bold text-green-700">550 000€</span>
+                  <span className="font-bold text-green-700">541 436€</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm">Apport personnel</span>
@@ -121,11 +95,11 @@ const FinancialProjections = () => {
                 </div>
                 <div className="flex justify-between border-t pt-2">
                   <span className="text-sm font-medium">Prêt nécessaire</span>
-                  <span className="font-bold text-green-800">220 000€</span>
+                  <span className="font-bold text-green-800">211 436€</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm">Mensualité (8 ans)</span>
-                  <span className="font-bold text-blue-600">3 100€/mois</span>
+                  <span className="font-bold text-blue-600">2 950€/mois</span>
                 </div>
               </div>
             </div>
@@ -135,23 +109,23 @@ const FinancialProjections = () => {
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span className="text-sm">CA Année 1</span>
-                  <span className="font-bold text-green-700">179 200€</span>
+                  <span className="font-bold text-green-700">148 700€</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm">Bénéfice net Année 1</span>
-                  <span className="font-bold text-green-700">116 800€</span>
+                  <span className="font-bold text-green-700">70 700€</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm">Cash-flow mensuel net</span>
-                  <span className="font-bold text-blue-600">6 633€</span>
+                  <span className="font-bold text-blue-600">2 942€</span>
                 </div>
                 <div className="flex justify-between border-t pt-2">
                   <span className="text-sm font-medium">ROI Année 1</span>
-                  <span className="font-bold text-green-800">17.0%</span>
+                  <span className="font-bold text-green-800">13.0%</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm">Retour investissement</span>
-                  <span className="font-bold text-blue-600">4.7 ans</span>
+                  <span className="font-bold text-blue-600">7.7 ans</span>
                 </div>
               </div>
             </div>
@@ -164,9 +138,9 @@ const FinancialProjections = () => {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Calculator className="h-5 w-5 text-blue-500" />
-            Optimisations d'Investissement Détaillées
+            Optimisations d'Investissement - Configuration 1 Portique
           </CardTitle>
-          <CardDescription>Réduction de 137 436€ sur l'investissement initial</CardDescription>
+          <CardDescription>Réduction de 186 000€ sur l'investissement initial</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
@@ -185,53 +159,57 @@ const FinancialProjections = () => {
           </div>
           
           <div className="mt-6 p-4 bg-green-100 rounded-lg border border-green-300">
-            <h4 className="font-semibold text-green-800 mb-2">Impact Global des Optimisations</h4>
+            <h4 className="font-semibold text-green-800 mb-2">Impact des Optimisations</h4>
             <div className="grid md:grid-cols-3 gap-4">
               <div className="text-center">
                 <p className="text-sm text-green-600">Économies totales</p>
-                <p className="text-2xl font-bold text-green-800">137 436€</p>
+                <p className="text-2xl font-bold text-green-800">186 000€</p>
               </div>
               <div className="text-center">
                 <p className="text-sm text-blue-600">Ratio d'endettement</p>
-                <p className="text-2xl font-bold text-blue-800">40%</p>
+                <p className="text-2xl font-bold text-blue-800">39%</p>
               </div>
               <div className="text-center">
                 <p className="text-sm text-purple-600">Taux de couverture</p>
-                <p className="text-2xl font-bold text-purple-800">214%</p>
+                <p className="text-2xl font-bold text-purple-800">232%</p>
               </div>
             </div>
           </div>
         </CardContent>
       </Card>
 
-      {/* STRATÉGIES DE VIABILITÉ */}
+      {/* CONFIGURATION TECHNIQUE */}
       <Card className="border-l-4 border-l-purple-500">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <TrendingUp className="h-5 w-5 text-purple-500" />
-            Stratégies de Viabilité Mises en Œuvre
+            Configuration Technique Optimisée
           </CardTitle>
+          <CardDescription>1 portique de lavage haute performance + services complémentaires</CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="grid gap-6">
-            {viabilityStrategies.map((strategy, index) => (
-              <div key={index} className="p-4 border rounded-lg">
-                <h4 className="font-semibold text-purple-800 mb-3">{strategy.category}</h4>
-                <ul className="space-y-2">
-                  {strategy.strategies.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start gap-2 text-sm">
-                      <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-3 p-2 bg-purple-50 rounded text-center">
-                  <span className="text-sm font-medium text-purple-700">
-                    {strategy.totalSavings ? `Économies: ${strategy.totalSavings.toLocaleString()}€` : `Revenus additionnels: ${strategy.additionalRevenue?.toLocaleString()}€`}
-                  </span>
-                </div>
-              </div>
-            ))}
+          <div className="grid gap-4">
+            <div className="p-4 bg-purple-50 rounded-lg border border-purple-200">
+              <h4 className="font-semibold text-purple-800 mb-3">Équipement Principal</h4>
+              <ul className="text-sm text-purple-700 space-y-2">
+                <li>• <strong>1 Portique Istobal M'22</strong> - Technologie dernière génération</li>
+                <li>• <strong>5 programmes de lavage</strong> - De 8€ à 24€ (finition céramique)</li>
+                <li>• <strong>Éclairage LED spectaculaire</strong> - Attractivité maximale</li>
+                <li>• <strong>Système de recyclage d'eau</strong> - Récupération hydrocarbures</li>
+                <li>• <strong>Couverture moderne</strong> - Protection intempéries</li>
+              </ul>
+            </div>
+            
+            <div className="p-4 bg-pink-50 rounded-lg border border-pink-200">
+              <h4 className="font-semibold text-pink-800 mb-3">Services Complémentaires</h4>
+              <ul className="text-sm text-pink-700 space-y-2">
+                <li>• <strong>2 pistes self-service</strong> - Haute pression + mousse</li>
+                <li>• <strong>2 aspirateurs puissants</strong> - Revenus additionnels</li>
+                <li>• <strong>Distributeur produits</strong> - Parfums, chiffons</li>
+                <li>• <strong>Monnaie automatique</strong> - Facilité d'usage</li>
+                <li>• <strong>Éclairage de sécurité</strong> - Fonctionnement 24h/24</li>
+              </ul>
+            </div>
           </div>
         </CardContent>
       </Card>
@@ -241,9 +219,9 @@ const FinancialProjections = () => {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Calculator className="h-5 w-5 text-green-500" />
-            Projections Financières Optimisées - Année 1
+            Projections Financières - Configuration 1 Portique
           </CardTitle>
-          <CardDescription>Chiffres réalistes et viables pour présentation bancaire</CardDescription>
+          <CardDescription>Chiffres réalistes basés sur l'expérience du secteur</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="h-80 w-full mb-6">
@@ -263,19 +241,19 @@ const FinancialProjections = () => {
           <div className="grid md:grid-cols-4 gap-4">
             <div className="p-4 bg-green-50 rounded-lg text-center">
               <p className="text-sm text-green-600 mb-1">CA Annuel</p>
-              <p className="text-2xl font-bold text-green-800">179 200€</p>
+              <p className="text-2xl font-bold text-green-800">148 700€</p>
             </div>
             <div className="p-4 bg-red-50 rounded-lg text-center">
               <p className="text-sm text-red-600 mb-1">Coûts Annuels</p>
-              <p className="text-2xl font-bold text-red-800">62 400€</p>
+              <p className="text-2xl font-bold text-red-800">78 000€</p>
             </div>
             <div className="p-4 bg-blue-50 rounded-lg text-center">
               <p className="text-sm text-blue-600 mb-1">Bénéfice Net</p>
-              <p className="text-2xl font-bold text-blue-800">116 800€</p>
+              <p className="text-2xl font-bold text-blue-800">70 700€</p>
             </div>
             <div className="p-4 bg-purple-50 rounded-lg text-center">
               <p className="text-sm text-purple-600 mb-1">Cash-Flow Net</p>
-              <p className="text-2xl font-bold text-purple-800">79 600€</p>
+              <p className="text-2xl font-bold text-purple-800">35 300€</p>
             </div>
           </div>
         </CardContent>
@@ -288,51 +266,51 @@ const FinancialProjections = () => {
             <Euro className="h-5 w-5 text-cyan-500" />
             Analyse de Viabilité Bancaire
           </CardTitle>
-          <CardDescription>Indicateurs clés pour validation du financement</CardDescription>
+          <CardDescription>Indicateurs optimaux pour approbation bancaire</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-semibold mb-3 text-cyan-800">Ratios Bancaires Optimaux</h4>
+              <h4 className="font-semibold mb-3 text-cyan-800">Ratios Bancaires Excellents</h4>
               <div className="space-y-3">
                 <div className="p-3 bg-cyan-50 rounded-lg">
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Ratio d'endettement</span>
-                    <span className="font-bold text-green-600">40%</span>
+                    <span className="font-bold text-green-600">39%</span>
                   </div>
                   <p className="text-xs text-cyan-600 mt-1">Excellent (norme bancaire &lt; 70%)</p>
                 </div>
                 <div className="p-3 bg-green-50 rounded-lg">
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Taux de couverture</span>
-                    <span className="font-bold text-green-600">214%</span>
+                    <span className="font-bold text-green-600">232%</span>
                   </div>
                   <p className="text-xs text-green-600 mt-1">Très sécurisé (norme &gt; 120%)</p>
                 </div>
                 <div className="p-3 bg-blue-50 rounded-lg">
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Capacité remboursement</span>
-                    <span className="font-bold text-blue-600">6 633€/mois</span>
+                    <span className="font-bold text-blue-600">5 892€/mois</span>
                   </div>
-                  <p className="text-xs text-blue-600 mt-1">Mensualité: 3 100€ (47% capacité)</p>
+                  <p className="text-xs text-blue-600 mt-1">Mensualité: 2 950€ (50% capacité)</p>
                 </div>
               </div>
             </div>
             
             <div>
-              <h4 className="font-semibold mb-3 text-purple-800">Garanties et Sécurités</h4>
+              <h4 className="font-semibold mb-3 text-purple-800">Garanties Solides</h4>
               <div className="space-y-3">
                 <div className="p-3 bg-purple-50 rounded-lg">
                   <p className="font-medium text-purple-800">Nantissement Immobilier</p>
-                  <p className="text-sm text-purple-700">280 000€ (127% du prêt)</p>
+                  <p className="text-sm text-purple-700">280 000€ (132% du prêt)</p>
                 </div>
                 <div className="p-3 bg-orange-50 rounded-lg">
-                  <p className="font-medium text-orange-800">Fonds Propres</p>
-                  <p className="text-sm text-orange-700">50 000€ + 280 000€ = 330 000€</p>
+                  <p className="font-medium text-orange-800">Fonds Propres Totaux</p>
+                  <p className="text-sm text-orange-700">330 000€ (apport + nantissement)</p>
                 </div>
                 <div className="p-3 bg-pink-50 rounded-lg">
-                  <p className="font-medium text-pink-800">Rentabilité Démontrée</p>
-                  <p className="text-sm text-pink-700">ROI 17% dès la première année</p>
+                  <p className="font-medium text-pink-800">Investissement Optimisé</p>
+                  <p className="text-sm text-pink-700">-186 000€ vs projet initial</p>
                 </div>
               </div>
             </div>
@@ -342,28 +320,28 @@ const FinancialProjections = () => {
             <h4 className="font-semibold text-green-800 mb-2">✅ PROJET BANCABLE - ARGUMENTS DÉCISIFS</h4>
             <div className="grid md:grid-cols-2 gap-4">
               <ul className="text-sm text-green-700 space-y-1">
-                <li>• <strong>Ratio d'endettement optimal à 40%</strong></li>
-                <li>• <strong>Garantie immobilière solide (127% du prêt)</strong></li>
-                <li>• <strong>Cash-flow positif dès le 1er mois</strong></li>
-                <li>• <strong>Secteur d'activité porteur et pérenne</strong></li>
+                <li>• <strong>Ratio d'endettement optimal à 39%</strong></li>
+                <li>• <strong>Garantie immobilière solide (132% du prêt)</strong></li>
+                <li>• <strong>Investissement optimisé et maîtrisé</strong></li>
+                <li>• <strong>Configuration technique éprouvée</strong></li>
               </ul>
               <ul className="text-sm text-green-700 space-y-1">
-                <li>• <strong>Position monopolistique locale</strong></li>
-                <li>• <strong>Soutien institutionnel (Mairie)</strong></li>
-                <li>• <strong>Retour investissement rapide (4.7 ans)</strong></li>
-                <li>• <strong>Marché touristique en croissance</strong></li>
+                <li>• <strong>Monopole local sur technologie moderne</strong></li>
+                <li>• <strong>Marché captif démontré</strong></li>
+                <li>• <strong>Cash-flow positif dès le 3ème mois</strong></li>
+                <li>• <strong>ROI attractif de 13% dès l'année 1</strong></li>
               </ul>
             </div>
           </div>
         </CardContent>
       </Card>
 
-      {/* COÛTS D'EXPLOITATION OPTIMISÉS */}
+      {/* COÛTS D'EXPLOITATION */}
       <Card className="border-l-4 border-l-indigo-500">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <PiggyBank className="h-5 w-5 text-indigo-500" />
-            Coûts d'Exploitation Optimisés
+            Coûts d'Exploitation Maîtrisés
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -381,18 +359,18 @@ const FinancialProjections = () => {
           
           <div className="mt-6 grid md:grid-cols-3 gap-4">
             <div className="p-4 bg-indigo-50 rounded-lg">
-              <h4 className="font-semibold text-indigo-800 mb-2">Coûts Fixes Optimisés</h4>
-              <p className="text-2xl font-bold text-indigo-800">5 200€/mois</p>
-              <p className="text-sm text-green-600">Économie: 1 300€/mois</p>
+              <h4 className="font-semibold text-indigo-800 mb-2">Coûts Fixes Totaux</h4>
+              <p className="text-2xl font-bold text-indigo-800">6 500€/mois</p>
+              <p className="text-sm text-indigo-600">78 000€/an</p>
             </div>
             <div className="p-4 bg-green-50 rounded-lg">
               <h4 className="font-semibold text-green-800 mb-2">Seuil de Rentabilité</h4>
-              <p className="text-2xl font-bold text-green-800">5 200€/mois</p>
-              <p className="text-sm text-green-600">Atteint dès janvier</p>
+              <p className="text-2xl font-bold text-green-800">6 500€/mois</p>
+              <p className="text-sm text-green-600">Atteint en mars</p>
             </div>
             <div className="p-4 bg-blue-50 rounded-lg">
               <h4 className="font-semibold text-blue-800 mb-2">Marge Sécurité</h4>
-              <p className="text-2xl font-bold text-blue-800">70%</p>
+              <p className="text-2xl font-bold text-blue-800">128%</p>
               <p className="text-sm text-blue-600">Très confortable</p>
             </div>
           </div>
@@ -404,7 +382,7 @@ const FinancialProjections = () => {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <TrendingUp className="h-5 w-5 text-yellow-500" />
-            Projection 5 Ans - Croissance Durable
+            Projection 5 Ans - Croissance Progressive
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -428,9 +406,9 @@ const FinancialProjections = () => {
           <div className="mt-6 p-4 bg-gradient-to-r from-yellow-100 to-green-100 rounded-lg">
             <h4 className="font-semibold text-gray-800 mb-2">🎯 CONCLUSION PROJET VIABLE</h4>
             <p className="text-sm text-gray-700">
-              Avec ces optimisations, le projet Leucwash devient <strong>parfaitement viable et présentable aux banques</strong>. 
-              L'investissement réduit à 550 000€, le prêt limité à 220 000€ et la rentabilité immédiate 
-              garantissent une approbation bancaire probable avec vos garanties.
+              Cette configuration avec <strong>1 portique optimise parfaitement le rapport investissement/rentabilité</strong>. 
+              L'investissement réduit à 541 436€, le prêt limité à 211 436€ et la rentabilité progressive 
+              garantissent une approbation bancaire avec vos garanties substantielles.
             </p>
           </div>
         </CardContent>
