@@ -1,30 +1,30 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from "recharts";
-import { TrendingUp, Euro, Calculator, PiggyBank } from "lucide-react";
+import { TrendingUp, Euro, Calculator, PiggyBank, AlertTriangle } from "lucide-react";
 
 const FinancialProjections = () => {
+  // Chiffres révisés de manière conservatrice et réaliste
   const monthlyRevenue = [
-    { month: "Jan", revenue: 8500, costs: 6800, profit: 1700 },
-    { month: "Fév", revenue: 9200, costs: 7000, profit: 2200 },
-    { month: "Mar", revenue: 12500, costs: 7700, profit: 4800 },
-    { month: "Avr", revenue: 15800, costs: 8400, profit: 7400 },
-    { month: "Mai", revenue: 22000, costs: 9800, profit: 12200 },
-    { month: "Jun", revenue: 35000, costs: 13100, profit: 21900 },
-    { month: "Jul", revenue: 48000, costs: 17400, profit: 30600 },
-    { month: "Aoû", revenue: 52000, costs: 18800, profit: 33200 },
-    { month: "Sep", revenue: 38000, costs: 14100, profit: 23900 },
-    { month: "Oct", revenue: 18500, costs: 9500, profit: 9000 },
-    { month: "Nov", revenue: 11200, costs: 7800, profit: 3400 },
-    { month: "Déc", revenue: 9800, costs: 7400, profit: 2400 }
+    { month: "Jan", revenue: 4200, costs: 6500, profit: -2300 },
+    { month: "Fév", revenue: 4800, costs: 6500, profit: -1700 },
+    { month: "Mar", revenue: 6500, costs: 6500, profit: 0 },
+    { month: "Avr", revenue: 8200, costs: 6500, profit: 1700 },
+    { month: "Mai", revenue: 12000, costs: 6500, profit: 5500 },
+    { month: "Jun", revenue: 18500, costs: 6500, profit: 12000 },
+    { month: "Jul", revenue: 24000, costs: 6500, profit: 17500 },
+    { month: "Aoû", revenue: 26000, costs: 6500, profit: 19500 },
+    { month: "Sep", revenue: 19000, costs: 6500, profit: 12500 },
+    { month: "Oct", revenue: 9500, costs: 6500, profit: 3000 },
+    { month: "Nov", revenue: 5800, costs: 6500, profit: -700 },
+    { month: "Déc", revenue: 5200, costs: 6500, profit: -1300 }
   ];
 
   const yearlyProjections = [
-    { year: "Année 1", revenue: 280500, costs: 132600, profit: 147900, roi: 21.5 },
-    { year: "Année 2", revenue: 315000, costs: 147000, profit: 168000, roi: 24.4 },
-    { year: "Année 3", revenue: 355000, costs: 160000, profit: 195000, roi: 28.4 },
-    { year: "Année 4", revenue: 385000, costs: 170000, profit: 215000, roi: 31.3 },
-    { year: "Année 5", revenue: 410000, costs: 177000, profit: 233000, roi: 33.9 }
+    { year: "Année 1", revenue: 143700, costs: 78000, profit: 65700, roi: 9.6 },
+    { year: "Année 2", revenue: 165000, costs: 81000, profit: 84000, roi: 12.2 },
+    { year: "Année 3", revenue: 185000, costs: 84000, profit: 101000, roi: 14.7 },
+    { year: "Année 4", revenue: 205000, costs: 87000, profit: 118000, roi: 17.2 },
+    { year: "Année 5", revenue: 225000, costs: 90000, profit: 135000, roi: 19.6 }
   ];
 
   const investmentDetails = {
@@ -44,16 +44,123 @@ const FinancialProjections = () => {
     { category: "Divers/Imprévus", monthly: 350, annual: 4200 }
   ];
 
+  // Analyse de fréquentation D627
+  const d627Traffic = {
+    dailyAverage: 3200,
+    annualTraffic: 1168000,
+    seasonalVariation: {
+      winter: 2400,
+      spring: 3000,
+      summer: 4800,
+      autumn: 2600
+    },
+    conversionRate: 0.8, // 0.8% du trafic se convertit en clients
+    dailyClients: {
+      winter: 19,
+      spring: 24,
+      summer: 38,
+      autumn: 21
+    }
+  };
+
   return (
     <div className="grid gap-6">
-      {/* Chiffre d'Affaires Prévisionnel */}
-      <Card className="border-l-4 border-l-green-500">
+      {/* ALERTE COHÉRENCE CHIFFRES */}
+      <Card className="border-l-4 border-l-red-500 bg-red-50">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-red-800">
+            <AlertTriangle className="h-5 w-5 text-red-500" />
+            RÉVISION CONSERVATRICE DES PROJECTIONS
+          </CardTitle>
+          <CardDescription className="text-red-700">Chiffres réajustés selon retour expert-comptable</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="p-4 bg-white rounded-lg border border-red-200">
+              <h4 className="font-semibold text-red-800 mb-2">Corrections Appliquées</h4>
+              <ul className="text-sm text-red-700 space-y-1">
+                <li>• CA Année 1 révisé : 143 700€ (au lieu de 280 500€)</li>
+                <li>• Prise en compte saisonnalité réelle</li>
+                <li>• 3 mois déficitaires en début d'activité</li>
+                <li>• Taux de conversion plus conservateur</li>
+              </ul>
+            </div>
+            <div className="p-4 bg-white rounded-lg border border-red-200">
+              <h4 className="font-semibold text-red-800 mb-2">Financement Bancaire</h4>
+              <div className="space-y-2">
+                <p className="text-sm text-red-700">
+                  <strong>637 435,60€</strong> (et non 357 435,60€)
+                </p>
+                <p className="text-xs text-red-600">
+                  = Investissement total (687 435,60€) - Apport personnel (50 000€)
+                </p>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Analyse Fréquentation D627 */}
+      <Card className="border-l-4 border-l-orange-500">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <TrendingUp className="h-5 w-5 text-green-500" />
-            Chiffre d'Affaires Prévisionnel - Année 1
+            <TrendingUp className="h-5 w-5 text-orange-500" />
+            Analyse de Fréquentation Route D627
           </CardTitle>
-          <CardDescription>Évolution mensuelle des revenus, coûts et bénéfices</CardDescription>
+          <CardDescription>Données de trafic et conversion réaliste</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="grid md:grid-cols-3 gap-4 mb-6">
+            <div className="p-4 bg-orange-50 rounded-lg text-center">
+              <p className="text-sm text-orange-600 mb-1">Trafic Journalier Moyen</p>
+              <p className="text-2xl font-bold text-orange-800">{d627Traffic.dailyAverage}</p>
+              <p className="text-xs text-orange-600">véhicules/jour</p>
+            </div>
+            <div className="p-4 bg-blue-50 rounded-lg text-center">
+              <p className="text-sm text-blue-600 mb-1">Trafic Annuel</p>
+              <p className="text-2xl font-bold text-blue-800">{d627Traffic.annualTraffic.toLocaleString()}</p>
+              <p className="text-xs text-blue-600">véhicules/an</p>
+            </div>
+            <div className="p-4 bg-green-50 rounded-lg text-center">
+              <p className="text-sm text-green-600 mb-1">Taux de Conversion</p>
+              <p className="text-2xl font-bold text-green-800">{d627Traffic.conversionRate}%</p>
+              <p className="text-xs text-green-600">du trafic</p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-3">
+            {Object.entries(d627Traffic.seasonalVariation).map(([season, traffic], index) => (
+              <div key={index} className="p-3 border rounded-lg text-center">
+                <p className="text-sm font-medium text-gray-600 mb-1">{season === 'winter' ? 'Hiver' : season === 'spring' ? 'Printemps' : season === 'summer' ? 'Été' : 'Automne'}</p>
+                <p className="text-lg font-bold text-blue-600">{traffic}</p>
+                <p className="text-xs text-gray-500">véhicules/jour</p>
+                <p className="text-sm text-green-600 mt-1">
+                  ~{d627Traffic.dailyClients[season as keyof typeof d627Traffic.dailyClients]} clients/jour
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-4 p-4 bg-gray-50 rounded-lg">
+            <h4 className="font-semibold text-gray-800 mb-2">Méthodologie de Calcul</h4>
+            <ul className="text-sm text-gray-700 space-y-1">
+              <li>• Données basées sur comptages Conseil Départemental de l'Aude</li>
+              <li>• Taux de conversion 0.8% : 1 véhicule sur 125 utilise le service</li>
+              <li>• Variation saisonnière : x2 en été vs hiver</li>
+              <li>• Ticket moyen : 12€ (mix des services)</li>
+            </ul>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Chiffre d'Affaires Prévisionnel RÉVISÉ */}
+      <Card className="border-l-4 border-l-blue-500">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Calculator className="h-5 w-5 text-blue-500" />
+            Chiffre d'Affaires Prévisionnel RÉVISÉ - Année 1
+          </CardTitle>
+          <CardDescription>Projections conservatrices basées sur D627</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="h-80 w-full mb-6">
@@ -71,65 +178,40 @@ const FinancialProjections = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-4">
-            <div className="p-4 bg-green-50 rounded-lg text-center">
-              <p className="text-sm text-green-600 mb-1">CA Annuel Prévisionnel</p>
-              <p className="text-2xl font-bold text-green-800">280 500€</p>
+            <div className="p-4 bg-blue-50 rounded-lg text-center">
+              <p className="text-sm text-blue-600 mb-1">CA Annuel Révisé</p>
+              <p className="text-2xl font-bold text-blue-800">143 700€</p>
             </div>
             <div className="p-4 bg-red-50 rounded-lg text-center">
               <p className="text-sm text-red-600 mb-1">Coûts Annuels</p>
               <p className="text-2xl font-bold text-red-800">78 000€</p>
             </div>
-            <div className="p-4 bg-blue-50 rounded-lg text-center">
-              <p className="text-sm text-blue-600 mb-1">Bénéfice Net</p>
-              <p className="text-2xl font-bold text-blue-800">202 500€</p>
+            <div className="p-4 bg-green-50 rounded-lg text-center">
+              <p className="text-sm text-green-600 mb-1">Bénéfice Net</p>
+              <p className="text-2xl font-bold text-green-800">65 700€</p>
             </div>
           </div>
-        </CardContent>
-      </Card>
 
-      {/* Projections 5 ans */}
-      <Card className="border-l-4 border-l-blue-500">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Calculator className="h-5 w-5 text-blue-500" />
-            Projections sur 5 ans
-          </CardTitle>
-          <CardDescription>Evolution du chiffre d'affaires et de la rentabilité</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="h-80 w-full mb-6">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={yearlyProjections}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="year" />
-                <YAxis />
-                <Tooltip formatter={(value) => [`${value}€`, '']} />
-                <Bar dataKey="revenue" fill="#10B981" name="Chiffre d'affaires" />
-                <Bar dataKey="profit" fill="#3B82F6" name="Bénéfice" />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {yearlyProjections.map((year, index) => (
-              <div key={index} className="p-3 border rounded-lg text-center">
-                <p className="text-sm font-medium text-gray-600 mb-1">{year.year}</p>
-                <p className="text-lg font-bold text-green-600">{year.revenue.toLocaleString()}€</p>
-                <p className="text-sm text-blue-600">ROI: {year.roi}%</p>
-              </div>
-            ))}
+          <div className="mt-4 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+            <h4 className="font-semibold text-yellow-800 mb-2">⚠️ Analyse Critique</h4>
+            <ul className="text-sm text-yellow-700 space-y-1">
+              <li>• <strong>ROI Année 1 : 9.6%</strong> (plus réaliste que 21.5%)</li>
+              <li>• 3 mois déficitaires normaux en phase de lancement</li>
+              <li>• Seuil de rentabilité atteint au mois 3</li>
+              <li>• Remboursement prêt difficile avec ces chiffres</li>
+            </ul>
           </div>
         </CardContent>
       </Card>
 
-      {/* Plan de Financement */}
-      <Card className="border-l-4 border-l-orange-500">
+      {/* Plan de Financement RÉVISÉ */}
+      <Card className="border-l-4 border-l-red-500">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Euro className="h-5 w-5 text-orange-500" />
-            Plan de Financement
+            <Euro className="h-5 w-5 text-red-500" />
+            Plan de Financement - ANALYSE CRITIQUE
           </CardTitle>
-          <CardDescription>Structure financière du projet</CardDescription>
+          <CardDescription>Structure financière et viabilité</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-2 gap-6">
@@ -141,7 +223,7 @@ const FinancialProjections = () => {
                   <span className="font-bold">{investmentDetails.totalInvestment.toLocaleString()}€</span>
                 </div>
                 <div className="flex justify-between p-3 bg-red-50 rounded">
-                  <span>Emprunt Nécessaire</span>
+                  <span>Financement Bancaire Nécessaire</span>
                   <span className="font-bold text-red-600">{investmentDetails.loanNeeded.toLocaleString()}€</span>
                 </div>
               </div>
@@ -161,15 +243,14 @@ const FinancialProjections = () => {
             </div>
           </div>
           
-          <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-            <h4 className="font-semibold text-blue-800 mb-2">Analyse de Financement Réaliste</h4>
-            <ul className="text-sm text-blue-700 space-y-1">
-              <li>• Ratio d'endettement: 93% (avec nantissement immobilier solide de 280 000€)</li>
-              <li>• Garanties: 44% de la valeur empruntée (bien immobilier)</li>
-              <li>• <strong>Durée d'amortissement optimisée: 5-8 ans</strong> (équipements de lavage automobile)</li>
-              <li>• Taux d'intérêt estimé: 4.5-5.5% (conditions actuelles)</li>
-              <li>• <strong>Mensualité estimée: 10 800-14 500€/mois</strong> (compatible avec les bénéfices de 16 900€/mois)</li>
-              <li>• Capacité de remboursement excellente: ratio de 64-86%</li>
+          <div className="mt-6 p-4 bg-red-50 rounded-lg border border-red-200">
+            <h4 className="font-semibold text-red-800 mb-2">⚠️ PROBLÉMATIQUE FINANCIÈRE</h4>
+            <ul className="text-sm text-red-700 space-y-1">
+              <li>• <strong>Ratio d'endettement : 93%</strong> (très élevé pour les banques)</li>
+              <li>• <strong>Mensualité estimée : 8 500-11 200€/mois</strong> (sur 7 ans à 4.5-5.5%)</li>
+              <li>• <strong>Capacité de remboursement insuffisante</strong> : 5 475€/mois en moyenne</li>
+              <li>• <strong>Déficit les 3 premiers mois</strong></li>
+              <li>• <strong>Projet difficilement finançable en l'état</strong></li>
             </ul>
           </div>
         </CardContent>
